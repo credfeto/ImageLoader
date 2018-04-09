@@ -1,0 +1,24 @@
+assembly-versioning-scheme: MajorMinorPatch
+mode: ContinuousDelivery
+continuous-delivery-fallback-tag: ''
+legacy-semver-padding: 1
+build-metadata-padding: 1
+commits-since-version-source-padding: 1
+branches: 
+    master:
+        mode: ContinuousDeployment
+        tag: master
+        increment: None
+        prevent-increment-of-merged-branch-version: false
+        track-merge-target: true
+        
+    releases?[/-]:
+        mode: ContinuousDelivery
+        tag: ''
+        increment: None
+        tag-number-pattern: '[/-](?<number>\d+)[-/]'
+        prevent-increment-of-merged-branch-version: true
+        track-merge-target: true
+ignore:
+  sha: []
+
