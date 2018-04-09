@@ -6,6 +6,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Core", "ImageLo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Core.UnitTests", "ImageLoader.Core.UnitTests\ImageLoader.Core.UnitTests.csproj", "{78FF90C7-27A2-4105-9121-35A155ECEA19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Raw", "ImageLoader.Raw\ImageLoader.Raw.csproj", "{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Standard", "ImageLoader.Standard\ImageLoader.Standard.csproj", "{64B6B1A8-860F-4960-B897-F5309129A1CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Photoshop", "ImageLoader.Photoshop\ImageLoader.Photoshop.csproj", "{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +30,17 @@ Global
 		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B6B1A8-860F-4960-B897-F5309129A1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B6B1A8-860F-4960-B897-F5309129A1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B6B1A8-860F-4960-B897-F5309129A1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B6B1A8-860F-4960-B897-F5309129A1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
