@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 
 namespace ImageLoader.Core
 {
