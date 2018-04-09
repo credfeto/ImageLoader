@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Interfaces", "ImageLoader.Interfaces\ImageLoader.Interfaces.csproj", "{C0B25854-A23A-498D-A7CE-19C347C05090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Core", "ImageLoader.Core\ImageLoader.Core.csproj", "{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Core.UnitTests", "ImageLoader.Core.UnitTests\ImageLoader.Core.UnitTests.csproj", "{78FF90C7-27A2-4105-9121-35A155ECEA19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B25854-A23A-498D-A7CE-19C347C05090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B25854-A23A-498D-A7CE-19C347C05090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B25854-A23A-498D-A7CE-19C347C05090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B25854-A23A-498D-A7CE-19C347C05090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78FF90C7-27A2-4105-9121-35A155ECEA19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
