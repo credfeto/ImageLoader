@@ -54,8 +54,7 @@ namespace ImageLoader.Raw
             }
             catch
             {
-                if (image != null)
-                    image.Dispose();
+                image?.Dispose();
 
                 throw;
             }
@@ -90,8 +89,7 @@ namespace ImageLoader.Raw
                     }
                     catch (Exception)
                     {
-                        if (image != null)
-                            image.Dispose();
+                        image?.Dispose();
 
                         throw;
                     }

@@ -37,8 +37,7 @@ namespace ImageLoader.Standard
             }
             catch
             {
-                if (image != null)
-                    image.Dispose();
+                image?.Dispose();
 
                 throw;
             }
