@@ -1,5 +1,4 @@
 assembly-versioning-scheme: MajorMinorPatchTag
-assembly-file-versioning-scheme: MajorMinorPatchTag
 assembly-informational-format: '{MajorMinorPatch}+{BranchName}'
 mode: ContinuousDelivery
 continuous-delivery-fallback-tag: ''
