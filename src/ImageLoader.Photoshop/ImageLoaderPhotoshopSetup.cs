@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace ImageLoader.Photoshop
 {
     [ExcludeFromCodeCoverage]
-    public static class ImageLoaderRawSetup
+    public static class ImageLoaderPhotoshopSetup
     {
         public static void Configure(IServiceCollection services)
         {
