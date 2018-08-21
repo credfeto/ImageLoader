@@ -38,6 +38,8 @@ namespace ImageLoader.Core
             return converter.LoadImageAsync(fileName);
         }
 
+        public IReadOnlyCollection<string> SupportedExtensions => _converters.Keys.ToArray();
+
 
         private IImageConverter FindConverter(string extension)
         {
