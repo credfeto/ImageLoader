@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
@@ -8,9 +7,7 @@ namespace ImageLoader.Interfaces
     public interface IImageConverter
     {
         string[] SupportedExtensions { get; }
-        
-        Task<Image<Rgba32>> LoadImageAsync(string fileName);
 
-        Task<Image<Rgba32>> LoadImageAsync(Stream source);
+        Task<Image<Rgba32>> LoadImageAsync(string fileName);
     }
 }

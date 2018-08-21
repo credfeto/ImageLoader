@@ -38,12 +38,6 @@ namespace ImageLoader.Core
             return converter.LoadImageAsync(fileName);
         }
 
-        public Task<Image<Rgba32>> LoadImageAsync(Stream source, string extension)
-        {
-            var converter = FindConverter(extension);
-
-            return converter.LoadImageAsync(source);
-        }
 
         private IImageConverter FindConverter(string extension)
         {
