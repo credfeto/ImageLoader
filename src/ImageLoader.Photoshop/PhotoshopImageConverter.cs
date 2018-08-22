@@ -16,9 +16,6 @@ namespace ImageLoader.Photoshop
             throw new NotImplementedException();
         }
 
-        public Task<Image<Rgba32>> LoadImageAsync(Stream source)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

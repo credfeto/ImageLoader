@@ -8,7 +8,7 @@ namespace ImageLoader.Standard
 {
     public class StandardImageConverter : IImageConverter
     {
-        public string[] SupportedExtensions => new[] {@".jpg", @".jpeg", @".bmp"};
+        public string[] SupportedExtensions => new[] {@".jpg", @".jpeg", @".bmp", @".png"};
 
         public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
@@ -18,11 +18,6 @@ namespace ImageLoader.Standard
             {
                 return LoadFromStream(ms);
             }
-        }
-
-        public Task<Image<Rgba32>> LoadImageAsync(Stream source)
-        {
-            return Task.FromResult(LoadFromStream(source));
         }
 
         private static Image<Rgba32> LoadFromStream(Stream source)
