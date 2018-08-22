@@ -20,4 +20,9 @@
     <ItemGroup>
         <ProjectReference Include="..\ImageLoader.Photoshop\ImageLoader.Photoshop.csproj"/>
     </ItemGroup>
+    <ItemGroup>
+        <None Update="test.psd">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -32,6 +33,14 @@ namespace ImageLoader.Standard.UnitTests
         public void JpgExtensionSupported()
         {
             Assert.Contains(_converter.SupportedExtensions, x => x == @"jpg");
+        }
+        
+        [Fact]
+        public async Task LoadJpg()
+        {
+            var image = await _converter.LoadImageAsync(@"test.jpg").ConfigureAwait(false);
+            
+            Assert.NotNull(image);
         }
     }
 }
