@@ -21,5 +21,20 @@ namespace ImageLoader.Standard.UnitTests
 
             Assert.Contains(converter.SupportedExtensions, x => x == @"jpg");
         }
+        
+        [Fact]
+        public void JpegExtensionSupported()
+        {
+            IServiceCollection services = new ServiceCollection();
+
+            ImageLoaderStandardSetup.Configure(services);
+
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
+
+            var converter = serviceProvider.GetService<IImageConverter>();
+            Assert.NotNull(converter);
+
+            Assert.Contains(converter.SupportedExtensions, x => x == @"jpeg");
+        }
     }
 }
