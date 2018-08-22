@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -25,6 +26,14 @@ namespace ImageLoader.Photoshop.UnitTests
         public void PsdExtensionSupported()
         {
             Assert.Contains(_converter.SupportedExtensions, x => x == @"psd");
+        }
+        
+        [Fact]
+        public async Task LoadPsd()
+        {
+            var image = await _converter.LoadImageAsync(@"test.psd").ConfigureAwait(false);
+            
+            Assert.NotNull(image);
         }
     }
 }
