@@ -12,6 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Standard", "Ima
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Photoshop", "ImageLoader.Photoshop\ImageLoader.Photoshop.csproj", "{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Photoshop.UnitTests", "ImageLoader.Photoshop.UnitTests\ImageLoader.Photoshop.UnitTests.csproj", "{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Raw.UnitTests", "ImageLoader.Raw.UnitTests\ImageLoader.Raw.UnitTests.csproj", "{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageLoader.Standard.UnitTests", "ImageLoader.Standard.UnitTests\ImageLoader.Standard.UnitTests.csproj", "{F7504C3B-5705-439E-859F-C2AAD9F3202F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +48,17 @@ Global
 		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7504C3B-5705-439E-859F-C2AAD9F3202F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7504C3B-5705-439E-859F-C2AAD9F3202F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7504C3B-5705-439E-859F-C2AAD9F3202F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7504C3B-5705-439E-859F-C2AAD9F3202F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

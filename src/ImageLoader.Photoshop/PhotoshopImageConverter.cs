@@ -9,7 +9,7 @@ namespace ImageLoader.Photoshop
 {
     public class PhotoshopImageConverter : IImageConverter
     {
-        public string[] SupportedExtensions => new[] {@".psd"};
+        public string[] SupportedExtensions => new[] {@"psd"};
 
         public Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
