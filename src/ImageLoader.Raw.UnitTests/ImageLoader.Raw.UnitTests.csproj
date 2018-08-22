@@ -20,4 +20,12 @@
     <ItemGroup>
         <ProjectReference Include="..\ImageLoader.Raw\ImageLoader.Raw.csproj"/>
     </ItemGroup>
+    <ItemGroup>
+        <None Update="test.cr2">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="test.rw2">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>

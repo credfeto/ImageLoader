@@ -7,8 +7,7 @@ namespace ImageLoader.Photoshop.UnitTests
 {
     public class PhotoshopTests
     {
-        [Fact]
-        public void PsdExtensionSupported()
+        public PhotoshopTests()
         {
             IServiceCollection services = new ServiceCollection();
 
@@ -16,10 +15,16 @@ namespace ImageLoader.Photoshop.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            var converter = serviceProvider.GetService<IImageConverter>();
-            Assert.NotNull(converter);
+            _converter = serviceProvider.GetService<IImageConverter>();
+            Assert.NotNull(_converter);
+        }
 
-            Assert.Contains(converter.SupportedExtensions, x => x == @"psd");
+        private readonly IImageConverter _converter;
+
+        [Fact]
+        public void PsdExtensionSupported()
+        {
+            Assert.Contains(_converter.SupportedExtensions, x => x == @"psd");
         }
     }
 }

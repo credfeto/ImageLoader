@@ -16,16 +16,16 @@ namespace ImageLoader.Standard.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            converter = serviceProvider.GetService<IImageConverter>();
-            Assert.NotNull(converter);
+            _converter = serviceProvider.GetService<IImageConverter>();
+            Assert.NotNull(_converter);
         }
 
-        public readonly IImageConverter converter;
+        private readonly IImageConverter _converter;
 
         [Fact]
         public async Task LoadPng()
         {
-            var image = await converter.LoadImageAsync(@"test.png").ConfigureAwait(false);
+            var image = await _converter.LoadImageAsync(@"test.png").ConfigureAwait(false);
             
             Assert.NotNull(image);
         }
@@ -33,7 +33,7 @@ namespace ImageLoader.Standard.UnitTests
         [Fact]
         public void PngExtensionSupported()
         {
-            Assert.Contains(converter.SupportedExtensions, x => x == @"jpg");
+            Assert.Contains(_converter.SupportedExtensions, x => x == @"jpg");
         }
     }
 }

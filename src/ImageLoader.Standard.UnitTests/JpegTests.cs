@@ -7,8 +7,7 @@ namespace ImageLoader.Standard.UnitTests
 {
     public class JpegTests
     {
-        [Fact]
-        public void JpgExtensionSupported()
+        public JpegTests()
         {
             IServiceCollection services = new ServiceCollection();
 
@@ -16,25 +15,23 @@ namespace ImageLoader.Standard.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            var converter = serviceProvider.GetService<IImageConverter>();
-            Assert.NotNull(converter);
-
-            Assert.Contains(converter.SupportedExtensions, x => x == @"jpg");
+            _converter = serviceProvider.GetService<IImageConverter>();
+            Assert.NotNull(_converter);
         }
-        
+
+        private readonly IImageConverter _converter;
+
         [Fact]
         public void JpegExtensionSupported()
         {
-            IServiceCollection services = new ServiceCollection();
+            Assert.Contains(_converter.SupportedExtensions, x => x == @"jpeg");
+        }
 
-            ImageLoaderStandardSetup.Configure(services);
 
-            IServiceProvider serviceProvider = services.BuildServiceProvider();
-
-            var converter = serviceProvider.GetService<IImageConverter>();
-            Assert.NotNull(converter);
-
-            Assert.Contains(converter.SupportedExtensions, x => x == @"jpeg");
+        [Fact]
+        public void JpgExtensionSupported()
+        {
+            Assert.Contains(_converter.SupportedExtensions, x => x == @"jpg");
         }
     }
 }
