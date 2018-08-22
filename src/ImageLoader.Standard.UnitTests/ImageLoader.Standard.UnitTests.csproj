@@ -20,4 +20,9 @@
     <ItemGroup>
         <ProjectReference Include="..\ImageLoader.Standard\ImageLoader.Standard.csproj"/>
     </ItemGroup>
+    <ItemGroup>
+        <None Update="test.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>
