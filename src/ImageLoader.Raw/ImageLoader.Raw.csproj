@@ -9,8 +9,8 @@
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.584.1"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1"/>
+        <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.626"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0"/>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\ImageLoader.Interfaces\ImageLoader.Interfaces.csproj"/>
