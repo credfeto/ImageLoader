@@ -23,17 +23,17 @@ namespace ImageLoader.Photoshop.UnitTests
         private readonly IImageConverter _converter;
 
         [Fact]
-        public void PsdExtensionSupported()
-        {
-            Assert.Contains(_converter.SupportedExtensions, x => x == @"psd");
-        }
-        
-        [Fact]
         public async Task LoadPsd()
         {
             var image = await _converter.LoadImageAsync(@"test.psd").ConfigureAwait(false);
-            
+
             Assert.NotNull(image);
+        }
+
+        [Fact]
+        public void PsdExtensionSupported()
+        {
+            Assert.Contains(_converter.SupportedExtensions, x => x == @"psd");
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using SixLabors.ImageSharp;
@@ -15,7 +14,5 @@ namespace ImageLoader.Photoshop
         {
             throw new NotImplementedException();
         }
-
-       
     }
 }

@@ -28,12 +28,12 @@ namespace ImageLoader.Raw.UnitTests
         {
             Assert.Contains(_converter.SupportedExtensions, x => x == @"cr2");
         }
-        
+
         [Fact]
         public async Task LoadCr2()
         {
             var image = await _converter.LoadImageAsync(@"test.cr2").ConfigureAwait(false);
-            
+
             Assert.NotNull(image);
         }
     }

@@ -34,12 +34,12 @@ namespace ImageLoader.Standard.UnitTests
         {
             Assert.Contains(_converter.SupportedExtensions, x => x == @"jpg");
         }
-        
+
         [Fact]
         public async Task LoadJpg()
         {
             var image = await _converter.LoadImageAsync(@"test.jpg").ConfigureAwait(false);
-            
+
             Assert.NotNull(image);
         }
     }
