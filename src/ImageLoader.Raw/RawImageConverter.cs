@@ -130,6 +130,8 @@ namespace ImageLoader.Raw
 
                 using (var tif = Tiff.ClientOpen("in-memory", "r", ms, new TiffStream()))
                 {
+                    if (tif == null) return null;
+
                     // Find the width and height of the image
                     var value = tif.GetField(TiffTag.IMAGEWIDTH);
                     var width = value[0]

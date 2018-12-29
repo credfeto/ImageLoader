@@ -32,7 +32,7 @@ namespace ImageLoader.Raw.UnitTests
         [Fact]
         public async Task LoadCr2()
         {
-            var image = await _converter.LoadImageAsync(@"test.cr2").ConfigureAwait(false);
+            var image = await _converter.LoadImageAsync(@"test.cr2");
 
             Assert.NotNull(image);
         }

@@ -38,7 +38,7 @@ namespace ImageLoader.Standard.UnitTests
         [Fact]
         public async Task LoadJpg()
         {
-            var image = await _converter.LoadImageAsync(@"test.jpg").ConfigureAwait(false);
+            var image = await _converter.LoadImageAsync(@"test.jpg");
 
             Assert.NotNull(image);
         }

@@ -25,7 +25,7 @@ namespace ImageLoader.Standard.UnitTests
         [Fact]
         public async Task LoadPng()
         {
-            var image = await _converter.LoadImageAsync(@"test.png").ConfigureAwait(false);
+            var image = await _converter.LoadImageAsync(@"test.png");
 
             Assert.NotNull(image);
         }

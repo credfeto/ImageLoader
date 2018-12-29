@@ -25,7 +25,7 @@ namespace ImageLoader.Photoshop.UnitTests
         [Fact]
         public async Task LoadPsd()
         {
-            var image = await _converter.LoadImageAsync(@"test.psd").ConfigureAwait(false);
+            var image = await _converter.LoadImageAsync(@"test.psd");
 
             Assert.NotNull(image);
         }
