@@ -5,11 +5,15 @@
 "SQL":
     - db/**/*
     - tools/**/*.sql
+    
+"Solidity":
+    - src/**/*.sol
 
 "unit-tests":
     - src/*.Tests.*/**/*
-    - src/*.Tests.Integration/**/*
+    - src/*.Tests.Integration.*/**/*
     - src/*.Tests/**/*
+    - src/*.Tests.Integration/**/*
 
 ".NET update": 
     - src/global.json
@@ -31,3 +35,4 @@
 
 "Read Me":
     - README.md
+ 
