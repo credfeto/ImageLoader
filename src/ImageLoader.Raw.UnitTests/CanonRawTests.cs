@@ -51,7 +51,7 @@ namespace ImageLoader.Raw.UnitTests
         [Fact]
         public async Task LoadCr2Async()
         {
-            string fileName = this.FindTestFile(fileName: @"test.cr2");
+            string fileName = this.FindTestFile(fileName: @"test.CR2");
 
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
