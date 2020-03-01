@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +31,11 @@ namespace ImageLoader.Photoshop.UnitTests
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.psd");
 
             Assert.NotNull(image);
+
+            using (FileStream fs = File.Create(path: "test.jpg"))
+            {
+                image.SaveAsJpeg(fs);
+            }
         }
 
         [Fact]
