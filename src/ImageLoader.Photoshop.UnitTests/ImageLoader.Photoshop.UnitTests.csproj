@@ -1,13 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
+        <OutputType>Library</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <IsPackable>false</IsPackable>
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <TreatSpecificWarningsAsErrors/>
-        <NoWarn>1591</NoWarn>
         <WarningsAsErrors/>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <NoWarn>1591</NoWarn>
         <LangVersion>latest</LangVersion>
+        <Features>strict;flow-analysis</Features>
+        <Nullable>enable</Nullable>
+        <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
     <PropertyGroup>
         <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
