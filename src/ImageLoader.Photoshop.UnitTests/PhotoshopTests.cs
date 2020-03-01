@@ -9,7 +9,7 @@ using Xunit;
 
 namespace ImageLoader.Photoshop.UnitTests
 {
-    public class PhotoshopTests
+    public sealed class PhotoshopTests
     {
         public PhotoshopTests()
         {

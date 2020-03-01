@@ -8,7 +8,7 @@ using Xunit;
 
 namespace ImageLoader.Standard.UnitTests
 {
-    public class PngTests
+    public sealed class PngTests
     {
         public PngTests()
         {

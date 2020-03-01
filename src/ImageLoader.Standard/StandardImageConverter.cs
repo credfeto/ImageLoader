@@ -7,7 +7,7 @@ using SixLabors.ImageSharp.PixelFormats;
 
 namespace ImageLoader.Standard
 {
-    public class StandardImageConverter : IImageConverter
+    public sealed class StandardImageConverter : IImageConverter
     {
         public IReadOnlyList<string> SupportedExtensions => new[] {@"jpg", @"jpeg", @"bmp", @"png"};
 

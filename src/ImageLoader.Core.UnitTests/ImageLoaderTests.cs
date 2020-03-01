@@ -6,7 +6,7 @@ using Xunit;
 
 namespace ImageLoader.Core.UnitTests
 {
-    public class ImageLoaderTests
+    public sealed class ImageLoaderTests
     {
         [Fact]
         public void DoesNotThrowIfMultipleConvertersRegistered()

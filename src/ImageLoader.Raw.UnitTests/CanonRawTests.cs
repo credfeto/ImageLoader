@@ -10,7 +10,7 @@ using Xunit.Sdk;
 
 namespace ImageLoader.Raw.UnitTests
 {
-    public class CanonRawTests
+    public sealed class CanonRawTests
     {
         public CanonRawTests()
         {

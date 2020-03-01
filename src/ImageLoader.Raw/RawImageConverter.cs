@@ -8,7 +8,7 @@ using SixLabors.ImageSharp.PixelFormats;
 
 namespace ImageLoader.Raw
 {
-    public class RawImageConverter : IImageConverter
+    public sealed class RawImageConverter : IImageConverter
     {
         public IReadOnlyList<string> SupportedExtensions =>
             new[] {@"arw", @"cf2", @"cr2", @"cr3", @"crw", @"dng", @"erf", @"mef", @"mrw", @"nef", @"orf", @"pef", @"raf", @"raw", @"rw2", @"sr2", @"x3f"};
