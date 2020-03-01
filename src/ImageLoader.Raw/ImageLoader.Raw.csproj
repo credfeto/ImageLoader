@@ -16,7 +16,7 @@
         <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.638"/>
+        <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="7.15.3"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2"/>
     </ItemGroup>
     <ItemGroup>
