@@ -37,11 +37,11 @@
         <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All"/>
     </ItemGroup>
     <ItemGroup>
-        <Content Include="test.cr2">
+        <Content Include="test.CR2">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <None Update="test.rw2">
+        <Content Update="test.RW2">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
+        </Content>
     </ItemGroup>
 </Project>
