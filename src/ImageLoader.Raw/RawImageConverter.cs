@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
@@ -26,18 +25,18 @@ namespace ImageLoader.Raw
 
         private static Image<Rgba32> LoadImageInternal(string filename)
         {
-            using (Process process = CreateProcess(dcraw: "dcraw", filename))
+            using (Process process = CreateProcess(rawConverterExecutable: "dcraw", filename))
             {
                 if (!process.Start())
                 {
                     Debug.WriteLine(string.Format(CultureInfo.InvariantCulture, format: "Executing : {0} {1}", process.StartInfo.FileName, process.StartInfo.Arguments));
 
-                    return null;
+                    throw new ImageProcessingException(errorMessage: "Could not find DCRAW");
                 }
 
                 using (Stream stream = process.StandardOutput.BaseStream)
                 {
-                    Image<Rgba32> image = null;
+                    Image<Rgba32>? image = null;
 
                     try
                     {
@@ -60,17 +59,13 @@ namespace ImageLoader.Raw
             }
         }
 
-        private static Process CreateProcess(string dcraw, string fileName)
+        private static Process CreateProcess(string rawConverterExecutable, string fileName)
         {
-            Contract.Requires(!string.IsNullOrEmpty(dcraw));
-            Contract.Requires(!string.IsNullOrEmpty(fileName));
-
-            //string.Format(CultureInfo.InvariantCulture, "-6 -w -q 3 -c -T \"{0}\"", fileName),
             return new Process
                    {
                        StartInfo =
                        {
-                           FileName = dcraw,
+                           FileName = rawConverterExecutable,
                            Arguments = string.Format(CultureInfo.InvariantCulture, format: "-6 -w -q 3 -c -T \"{0}\"", fileName),
                            UseShellExecute = false,
                            CreateNoWindow = true,
@@ -95,8 +90,6 @@ namespace ImageLoader.Raw
         [SuppressMessage(category: "Microsoft.Usage", checkId: "CA1801:ReviewUnusedParameters", MessageId = "fileName", Justification = "Used for logging")]
         public static Image<Rgba32> OpenBitmapFromTiffStream(Stream stream)
         {
-            Contract.Requires(stream != null);
-
             using (MemoryStream ms = new MemoryStream())
             {
                 stream.CopyTo(ms);
@@ -106,7 +99,7 @@ namespace ImageLoader.Raw
                 {
                     if (tif == null)
                     {
-                        return null;
+                        throw new ImageProcessingException(errorMessage: "Could not convert Tiff to JPG");
                     }
 
                     // Find the width and height of the image
@@ -123,11 +116,11 @@ namespace ImageLoader.Raw
 
                     if (!tif.ReadRGBAImage(width, height, raster))
                     {
-                        return null;
+                        throw new ImageProcessingException(errorMessage: "Could not convert Tiff to JPG");
                     }
 
                     bool ok = false;
-                    Image<Rgba32> bmp = null;
+                    Image<Rgba32>? bmp = null;
 
                     try
                     {
