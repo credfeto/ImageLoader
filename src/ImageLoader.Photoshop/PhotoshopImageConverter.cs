@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using Ntreev.Library.Psd;
@@ -11,19 +12,36 @@ namespace ImageLoader.Photoshop
     {
         public IReadOnlyList<string> SupportedExtensions => new[] {@"psd"};
 
-        public Task<Image<Rgba32>> LoadImageAsync(string fileName)
+        public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
-            using (PsdDocument imageSource = PsdDocument.Create(fileName))
+            byte[] source = await File.ReadAllBytesAsync(fileName);
+
+            using (MemoryStream ms = new MemoryStream(source, writable: false))
             {
-                if (!imageSource.HasImage)
+                using (PsdDocument psd = PsdDocument.Create(ms))
                 {
-                    throw new ImageProcessingException(errorMessage: "PSD has no image");
+                    IImageSource imageSource = psd;
+
+                    byte[] data = imageSource.MergeChannels();
+
+                    if (imageSource.Channels.Length == 4)
+                    {
+                        return Convert(Image.LoadPixelData<Bgra32>(data, imageSource.Width, imageSource.Height));
+                    }
+
+                    return Convert(Image.LoadPixelData<Bgr24>(data, imageSource.Width, imageSource.Height));
                 }
-
-                byte[] data = imageSource.MergeChannels();
-
-                return Task.FromResult(Image.Load(data));
             }
+        }
+
+        private static Image<Rgba32> Convert(Image<Bgra32> source)
+        {
+            return source.CloneAs<Rgba32>();
+        }
+
+        private static Image<Rgba32> Convert(Image<Bgr24> source)
+        {
+            return source.CloneAs<Rgba32>();
         }
     }
 }

@@ -37,8 +37,8 @@
         <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All"/>
     </ItemGroup>
     <ItemGroup>
-        <None Update="test.psd">
+        <Content Include="test.psd">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
+        </Content>
     </ItemGroup>
 </Project>
