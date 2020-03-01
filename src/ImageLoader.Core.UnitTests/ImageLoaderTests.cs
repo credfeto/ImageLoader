@@ -15,22 +15,21 @@ namespace ImageLoader.Core.UnitTests
 
             ImageLoaderCoreSetup.Configure(services);
 
-            var ic1 = Substitute.For<IImageConverter>();
+            IImageConverter ic1 = Substitute.For<IImageConverter>();
             ic1.SupportedExtensions.Returns(new[] {".jpg", ".jpeg"});
 
             services.AddSingleton(ic1);
 
-            var ic2 = Substitute.For<IImageConverter>();
+            IImageConverter ic2 = Substitute.For<IImageConverter>();
             ic2.SupportedExtensions.Returns(new[] {".png"});
 
             services.AddSingleton(ic2);
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            var il = serviceProvider.GetService<IImageLoader>();
+            IImageLoader il = serviceProvider.GetService<IImageLoader>();
             Assert.NotNull(il);
         }
-
 
         [Fact]
         public void ThrowsExceptionWhenNoConvertersRegistered()
@@ -41,7 +40,7 @@ namespace ImageLoader.Core.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => serviceProvider.GetService<IImageLoader>());
+            Assert.Throws<ArgumentOutOfRangeException>(testCode: () => serviceProvider.GetService<IImageLoader>());
         }
     }
 }

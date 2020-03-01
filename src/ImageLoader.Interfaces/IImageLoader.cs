@@ -8,6 +8,7 @@ namespace ImageLoader.Interfaces
     public interface IImageLoader
     {
         IReadOnlyCollection<string> SupportedExtensions { get; }
+
         Task<Image<Rgba32>> LoadImageAsync(string fileName);
     }
 }

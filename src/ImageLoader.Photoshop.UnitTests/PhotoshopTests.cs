@@ -2,6 +2,8 @@ using System;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 
 namespace ImageLoader.Photoshop.UnitTests
@@ -16,16 +18,16 @@ namespace ImageLoader.Photoshop.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            _converter = serviceProvider.GetService<IImageConverter>();
-            Assert.NotNull(_converter);
+            this._converter = serviceProvider.GetService<IImageConverter>();
+            Assert.NotNull(this._converter);
         }
 
         private readonly IImageConverter _converter;
 
         [Fact]
-        public async Task LoadPsd()
+        public async Task LoadPsdAsync()
         {
-            var image = await _converter.LoadImageAsync(@"test.psd");
+            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.psd");
 
             Assert.NotNull(image);
         }
@@ -33,7 +35,7 @@ namespace ImageLoader.Photoshop.UnitTests
         [Fact]
         public void PsdExtensionSupported()
         {
-            Assert.Contains(_converter.SupportedExtensions, x => x == @"psd");
+            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"psd");
         }
     }
 }

@@ -10,7 +10,10 @@ namespace ImageLoader.Core
     {
         public static void Configure(IServiceCollection services)
         {
-            if (services == null) throw new ArgumentNullException(nameof(services));
+            if (services == null)
+            {
+                throw new ArgumentNullException(nameof(services));
+            }
 
             services.AddSingleton<IImageLoader, ImageLoaderFactory>();
         }
