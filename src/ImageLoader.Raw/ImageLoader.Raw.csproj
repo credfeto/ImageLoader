@@ -12,8 +12,8 @@
         <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.626"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1"/>
+        <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.638"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2"/>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\ImageLoader.Interfaces\ImageLoader.Interfaces.csproj"/>
