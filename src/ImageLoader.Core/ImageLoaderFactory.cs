@@ -20,14 +20,7 @@ namespace ImageLoader.Core
                 throw new ArgumentNullException(nameof(converters));
             }
 
-            Dictionary<string, IImageConverter> supportedConverters = LoadConverters(converters);
-
-            if (!supportedConverters.Any())
-            {
-                throw new ArgumentOutOfRangeException(nameof(converters), converters, message: "No Converters Loaded");
-            }
-
-            this._converters = supportedConverters;
+            this._converters = LoadConverters(converters);
             this.SupportedExtensions = this._converters.Keys.ToArray();
         }
 
@@ -52,6 +45,11 @@ namespace ImageLoader.Core
                 {
                     supportedConverters.Add(extension, converter);
                 }
+            }
+
+            if (!supportedConverters.Any())
+            {
+                throw new ArgumentOutOfRangeException(nameof(converters), converters, message: "No Converters Loaded");
             }
 
             return supportedConverters;
