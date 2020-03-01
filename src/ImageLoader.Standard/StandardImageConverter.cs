@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using SixLabors.ImageSharp;
@@ -8,13 +9,13 @@ namespace ImageLoader.Standard
 {
     public class StandardImageConverter : IImageConverter
     {
-        public string[] SupportedExtensions => new[] {@"jpg", @"jpeg", @"bmp", @"png"};
+        public IReadOnlyList<string> SupportedExtensions => new[] {@"jpg", @"jpeg", @"bmp", @"png"};
 
         public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
-            var content = await File.ReadAllBytesAsync(fileName);
+            byte[] content = await File.ReadAllBytesAsync(fileName);
 
-            using (var ms = new MemoryStream(content, false))
+            using (MemoryStream ms = new MemoryStream(content, writable: false))
             {
                 return LoadFromStream(ms);
             }

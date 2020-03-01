@@ -9,7 +9,7 @@ using SixLabors.ImageSharp.PixelFormats;
 
 namespace ImageLoader.Core
 {
-    internal sealed class ImageLoaderFactory : IImageLoader
+    public sealed class ImageLoaderFactory : IImageLoader
     {
         private readonly IReadOnlyDictionary<string, IImageConverter> _converters;
 
@@ -23,9 +23,11 @@ namespace ImageLoader.Core
             Dictionary<string, IImageConverter> supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
 
             foreach (IImageConverter converter in converters)
-            foreach (string extension in converter.SupportedExtensions)
             {
-                supportedConverters.Add(extension, converter);
+                foreach (string extension in converter.SupportedExtensions)
+                {
+                    supportedConverters.Add(extension, converter);
+                }
             }
 
             if (!supportedConverters.Any())
@@ -52,7 +54,7 @@ namespace ImageLoader.Core
         {
             if (!this._converters.TryGetValue(extension, out IImageConverter converter) || converter == null)
             {
-                throw new ArgumentOutOfRangeException(nameof(extension), extension, message: "No Converter available for extension");
+                throw new ArgumentOutOfRangeException(nameof(extension), extension, message: @"No Converter available for extension");
             }
 
             return converter;

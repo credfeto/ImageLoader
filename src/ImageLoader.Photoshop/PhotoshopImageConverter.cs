@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ImageLoader.Interfaces;
 using SixLabors.ImageSharp;
@@ -8,7 +9,7 @@ namespace ImageLoader.Photoshop
 {
     public class PhotoshopImageConverter : IImageConverter
     {
-        public string[] SupportedExtensions => new[] {@"psd"};
+        public IReadOnlyList<string> SupportedExtensions => new[] {@"psd"};
 
         public Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
