@@ -17,25 +17,7 @@ namespace ImageLoader.Standard
 
             using (MemoryStream ms = new MemoryStream(content, writable: false))
             {
-                return LoadFromStream(ms);
-            }
-        }
-
-        private static Image<Rgba32> LoadFromStream(Stream source)
-        {
-            Image<Rgba32>? image = null;
-
-            try
-            {
-                image = Image.Load(source);
-
-                return image;
-            }
-            catch
-            {
-                image?.Dispose();
-
-                throw;
+                return Image.Load(ms);
             }
         }
     }
