@@ -23,7 +23,7 @@ namespace ImageLoader.Standard
 
         private static Image<Rgba32> LoadFromStream(Stream source)
         {
-            Image<Rgba32> image = null;
+            Image<Rgba32>? image = null;
 
             try
             {
