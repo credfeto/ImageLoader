@@ -56,6 +56,9 @@ namespace ImageLoader.Raw.UnitTests
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
             Assert.NotNull(image);
+            Assert.Equal(expected: 3870, image.Width);
+            Assert.Equal(expected: 5796, image.Height);
+            Assert.Equal(expected: 32, image.PixelType.BitsPerPixel);
         }
     }
 }
