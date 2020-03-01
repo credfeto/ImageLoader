@@ -17,7 +17,8 @@ namespace ImageLoader.Standard
 
             using (MemoryStream ms = new MemoryStream(content, writable: false))
             {
-                return Image.Load(ms);
+                return Image.Load(ms)
+                            .CloneAs<Rgba32>();
             }
         }
     }
