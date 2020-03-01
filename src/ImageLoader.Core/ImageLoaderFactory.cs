@@ -20,15 +20,7 @@ namespace ImageLoader.Core
                 throw new ArgumentNullException(nameof(converters));
             }
 
-            Dictionary<string, IImageConverter> supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
-
-            foreach (IImageConverter converter in converters)
-            {
-                foreach (string extension in converter.SupportedExtensions)
-                {
-                    supportedConverters.Add(extension, converter);
-                }
-            }
+            Dictionary<string, IImageConverter> supportedConverters = LoadConverters(converters);
 
             if (!supportedConverters.Any())
             {
@@ -49,6 +41,21 @@ namespace ImageLoader.Core
         }
 
         public IReadOnlyCollection<string> SupportedExtensions { get; }
+
+        private static Dictionary<string, IImageConverter> LoadConverters(IEnumerable<IImageConverter> converters)
+        {
+            Dictionary<string, IImageConverter> supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (IImageConverter converter in converters)
+            {
+                foreach (string extension in converter.SupportedExtensions)
+                {
+                    supportedConverters.Add(extension, converter);
+                }
+            }
+
+            return supportedConverters;
+        }
 
         private IImageConverter FindConverter(string extension)
         {
