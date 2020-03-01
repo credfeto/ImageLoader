@@ -26,7 +26,7 @@ namespace ImageLoader.Raw.UnitTests
 
         private readonly IImageConverter _converter;
 
-        private string FindTestFile(string fileName)
+        private static string FindTestFile(string fileName)
         {
             string? location = Path.GetDirectoryName(typeof(CanonRawTests).Assembly.Location);
 
@@ -51,7 +51,7 @@ namespace ImageLoader.Raw.UnitTests
         [Fact]
         public async Task LoadCr2Async()
         {
-            string fileName = this.FindTestFile(fileName: @"test.CR2");
+            string fileName = FindTestFile(fileName: @"test.CR2");
 
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
