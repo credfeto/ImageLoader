@@ -45,9 +45,9 @@ jobs:
       run: |
          cd src
          dotnet pack --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }}
-    - name: publish
     - name: Test dotnet
       run: |
         cd src
         dotnet test --configuration Release /p:Version=${{ env.BUILD_VERSION }}
+    - name: publish
       run: dotnet nuget push dist/src/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/credfeto/index.json
