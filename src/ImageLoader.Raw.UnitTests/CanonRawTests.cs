@@ -60,5 +60,24 @@ namespace ImageLoader.Raw.UnitTests
             Assert.Equal(expected: 5796, image.Height);
             Assert.Equal(expected: 32, image.PixelType.BitsPerPixel);
         }
+
+        [Fact]
+        public async Task LoadRw2Async()
+        {
+            string fileName = FindTestFile(fileName: @"test.RW2");
+
+            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
+
+            Assert.NotNull(image);
+            Assert.Equal(expected: 4608, image.Width);
+            Assert.Equal(expected: 3464, image.Height);
+            Assert.Equal(expected: 32, image.PixelType.BitsPerPixel);
+        }
+
+        [Fact]
+        public void Rw2ExtensionSupported()
+        {
+            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"rw2");
+        }
     }
 }

@@ -40,7 +40,7 @@
         <Content Include="test.CR2">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <Content Update="test.RW2">
+        <Content Include="test.RW2">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
