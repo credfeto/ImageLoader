@@ -15,37 +15,45 @@ namespace ImageLoader.Core
 
         public ImageLoaderFactory(IEnumerable<IImageConverter> converters)
         {
-            if (converters == null) throw new ArgumentNullException(nameof(converters));
+            if (converters == null)
+            {
+                throw new ArgumentNullException(nameof(converters));
+            }
 
-            var supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, IImageConverter> supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
 
-            foreach (var converter in converters)
-            foreach (var extension in converter.SupportedExtensions)
+            foreach (IImageConverter converter in converters)
+            foreach (string extension in converter.SupportedExtensions)
+            {
                 supportedConverters.Add(extension, converter);
+            }
 
             if (!supportedConverters.Any())
-                throw new ArgumentOutOfRangeException(nameof(converters), converters, "No Converters Loaded");
+            {
+                throw new ArgumentOutOfRangeException(nameof(converters), converters, message: "No Converters Loaded");
+            }
 
-            _converters = supportedConverters;
+            this._converters = supportedConverters;
+            this.SupportedExtensions = this._converters.Keys.ToArray();
         }
 
         public Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
-            var extension = Path.GetExtension(fileName);
+            string extension = Path.GetExtension(fileName);
 
-            var converter = FindConverter(extension);
+            IImageConverter converter = this.FindConverter(extension);
 
             return converter.LoadImageAsync(fileName);
         }
 
-        public IReadOnlyCollection<string> SupportedExtensions => _converters.Keys.ToArray();
-
+        public IReadOnlyCollection<string> SupportedExtensions { get; }
 
         private IImageConverter FindConverter(string extension)
         {
-            if (!_converters.TryGetValue(extension, out var converter) || converter == null)
-                throw new ArgumentOutOfRangeException(nameof(extension), extension,
-                    "No Converter available for extension");
+            if (!this._converters.TryGetValue(extension, out IImageConverter converter) || converter == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(extension), extension, message: "No Converter available for extension");
+            }
 
             return converter;
         }
