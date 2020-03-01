@@ -3,10 +3,13 @@
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <TreatSpecificWarningsAsErrors />
+        <TreatSpecificWarningsAsErrors/>
         <NoWarn>1701;1702;1705;1591</NoWarn>
         <WarningsAsErrors/>
         <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.626"/>
