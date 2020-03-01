@@ -66,12 +66,12 @@ jobs:
          cd src
          dotnet pack ImageLoader.Photoshop --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Publish ImageLoader.Interfaces
-      run: dotnet nuget push src/dist/ImageLoader.Interfaces.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/ImageLoader.Interfaces.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Core
-      run: dotnet nuget push src/dist/ImageLoader.Core.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/ImageLoader.Core.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Standard
-      run: dotnet nuget push src/dist/ImageLoader.Standard.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/ImageLoader.Standard.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Raw
-      run: dotnet nuget push src/dist/ImageLoader.Raw.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/ImageLoader.Raw.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Photoshop
-      run: dotnet nuget push src/dist/ImageLoader.Photoshop.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/ImageLoader.Photoshop.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
