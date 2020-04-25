@@ -26,14 +26,25 @@ namespace ImageLoader.Core
 
         public Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
-            string extension = Path.GetExtension(fileName);
+            string extension = GetExtension(fileName);
 
             IImageConverter converter = this.FindConverter(extension);
 
             return converter.LoadImageAsync(fileName);
         }
 
+        public bool CanLoad(string fileName)
+        {
+            return this._converters.TryGetValue(GetExtension(fileName), out IImageConverter converter) && converter != null;
+        }
+
         public IReadOnlyCollection<string> SupportedExtensions { get; }
+
+        private static string GetExtension(string fileName)
+        {
+            return Path.GetExtension(fileName)
+                       .TrimStart(trimChar: '.');
+        }
 
         private static Dictionary<string, IImageConverter> LoadConverters(IEnumerable<IImageConverter> converters)
         {
