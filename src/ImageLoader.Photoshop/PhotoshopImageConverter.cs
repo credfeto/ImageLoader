@@ -16,7 +16,7 @@ namespace ImageLoader.Photoshop
         {
             byte[] source = await File.ReadAllBytesAsync(fileName);
 
-            using (MemoryStream ms = new MemoryStream(source, writable: false))
+            using (MemoryStream ms = new MemoryStream(buffer: source, writable: false))
             {
                 using (PsdDocument psd = PsdDocument.Create(ms))
                 {
@@ -26,10 +26,10 @@ namespace ImageLoader.Photoshop
 
                     if (imageSource.Channels.Length == 4)
                     {
-                        return Convert(Image.LoadPixelData<Bgra32>(data, imageSource.Width, imageSource.Height));
+                        return Convert(Image.LoadPixelData<Bgra32>(data: data, width: imageSource.Width, height: imageSource.Height));
                     }
 
-                    return Convert(Image.LoadPixelData<Bgr24>(data, imageSource.Width, imageSource.Height));
+                    return Convert(Image.LoadPixelData<Bgr24>(data: data, width: imageSource.Width, height: imageSource.Height));
                 }
             }
         }

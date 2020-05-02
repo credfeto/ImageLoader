@@ -15,7 +15,7 @@ namespace ImageLoader.Standard
         {
             byte[] content = await File.ReadAllBytesAsync(fileName);
 
-            using (MemoryStream ms = new MemoryStream(content, writable: false))
+            using (MemoryStream ms = new MemoryStream(buffer: content, writable: false))
             {
                 return Image.Load(ms)
                             .CloneAs<Rgba32>();

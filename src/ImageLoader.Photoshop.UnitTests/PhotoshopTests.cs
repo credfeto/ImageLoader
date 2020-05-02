@@ -41,7 +41,7 @@ namespace ImageLoader.Photoshop.UnitTests
         [Fact]
         public void PsdExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"psd");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"psd");
         }
     }
 }

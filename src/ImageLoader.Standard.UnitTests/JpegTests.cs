@@ -27,13 +27,13 @@ namespace ImageLoader.Standard.UnitTests
         [Fact]
         public void JpegExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"jpeg");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpeg");
         }
 
         [Fact]
         public void JpgExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"jpg");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
         }
 
         [Fact]
