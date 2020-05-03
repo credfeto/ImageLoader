@@ -34,8 +34,7 @@ jobs:
     - name: Install Build Version Tool
       run: |
         dotnet new tool-manifest
-        dotnet tool install --local FunFair.BuildVersion --add-source ${{ sec>
-      run: nuget install FunFair.BuildVersion -ExcludeVersion -Source ${{ secrets.FUNFAIR_NUGET_FEED }}
+        dotnet tool install --local FunFair.BuildVersion --add-source ${{ secrets.FUNFAIR_NUGET_FEED }}
     - name: Set Define Build Version
       run: dotnet buildversion  ${{ steps.buildnumber.outputs.build_number }} 
     - name: Build with dotnet
