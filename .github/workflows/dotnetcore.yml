@@ -65,13 +65,11 @@ jobs:
       run: |
          cd src
          dotnet pack Credfeto.ImageLoader.Photoshop --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
-    - name: Publish ImageLoader.Interfaces
-      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Interfaces.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
-    - name: Publish ImageLoader.Core
-      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Core.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
-    - name: Publish ImageLoader.Standard
-      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Standard.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
-    - name: Publish ImageLoader.Raw
-      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Raw.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
-    - name: Publish ImageLoader.Photoshop
-      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Photoshop.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+    - name: Publish
+      run: |
+        cd src/dist
+        dotnet nuget push Credfeto.ImageLoader.Interfaces.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+        dotnet nuget push Credfeto.ImageLoader.Core.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+        dotnet nuget push Credfeto.ImageLoader.Standard.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+        dotnet nuget push Credfeto.ImageLoader.Raw.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+        dotnet nuget push Credfeto.ImageLoader.Photoshop.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
