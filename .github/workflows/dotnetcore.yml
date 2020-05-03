@@ -31,12 +31,13 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-    - name: Setup Nuget
-      run: sudo apt-get install nuget
     - name: Install Build Version Tool
+      run: |
+        dotnet new tool-manifest
+        dotnet tool install --local FunFair.BuildVersion --add-source ${{ sec>
       run: nuget install FunFair.BuildVersion -ExcludeVersion -Source ${{ secrets.FUNFAIR_NUGET_FEED }}
     - name: Set Define Build Version
-      run: dotnet FunFair.BuildVersion/lib/BuildVersion.dll  ${{ steps.buildnumber.outputs.build_number }} 
+      run: dotnet buildversion  ${{ steps.buildnumber.outputs.build_number }} 
     - name: Build with dotnet
       run: |
         cd src
@@ -45,33 +46,33 @@ jobs:
       run: |
         cd src
         dotnet test --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
-    - name: Pack ImageLoader.Interfaces
+    - name: Pack Credfeto.ImageLoader.Interfaces
       run: |
          cd src
-         dotnet pack ImageLoader.Interfaces --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
+         dotnet pack Credfeto.ImageLoader.Interfaces --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Pack ImageLoader.Core
       run: |
          cd src
-         dotnet pack ImageLoader.Core --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
+         dotnet pack Credfeto.ImageLoader.Core --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Pack ImageLoader.Standard
       run: |
          cd src
-         dotnet pack ImageLoader.Standard --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
+         dotnet pack Credfeto.ImageLoader.Standard --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Pack ImageLoader.Raw
       run: |
          cd src
-         dotnet pack ImageLoader.Raw --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
+         dotnet pack Credfeto.ImageLoader.Raw --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Pack ImageLoader.Photoshop
       run: |
          cd src
-         dotnet pack ImageLoader.Photoshop --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
+         dotnet pack Credfeto.ImageLoader.Photoshop --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
     - name: Publish ImageLoader.Interfaces
-      run: dotnet nuget push src/dist/ImageLoader.Interfaces.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Interfaces.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Core
-      run: dotnet nuget push src/dist/ImageLoader.Core.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Core.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Standard
-      run: dotnet nuget push src/dist/ImageLoader.Standard.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Standard.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Raw
-      run: dotnet nuget push src/dist/ImageLoader.Raw.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Raw.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Publish ImageLoader.Photoshop
-      run: dotnet nuget push src/dist/ImageLoader.Photoshop.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+      run: dotnet nuget push src/dist/Credfeto.ImageLoader.Photoshop.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
