@@ -45,7 +45,7 @@ jobs:
       run: |
         cd src
         dotnet test --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
-    - name: Pack Credfeto.ImageLoader.Interfaces
+    - name: Pack ImageLoader.Interfaces
       run: |
          cd src
          dotnet pack Credfeto.ImageLoader.Interfaces --configuration Release -o dist /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore
