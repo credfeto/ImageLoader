@@ -54,13 +54,13 @@ namespace Credfeto.ImageLoader.Core
             {
                 foreach (string extension in converter.SupportedExtensions)
                 {
-                    supportedConverters.Add(extension, converter);
+                    supportedConverters.Add(key: extension, value: converter);
                 }
             }
 
             if (!supportedConverters.Any())
             {
-                throw new ArgumentOutOfRangeException(nameof(converters), converters, message: "No Converters Loaded");
+                throw new ArgumentOutOfRangeException(nameof(converters), actualValue: converters, message: "No Converters Loaded");
             }
 
             return supportedConverters;
@@ -68,9 +68,9 @@ namespace Credfeto.ImageLoader.Core
 
         private IImageConverter FindConverter(string extension)
         {
-            if (!this._converters.TryGetValue(extension, out IImageConverter converter) || converter == null)
+            if (!this._converters.TryGetValue(key: extension, out IImageConverter converter) || converter == null)
             {
-                throw new ArgumentOutOfRangeException(nameof(extension), extension, message: @"No Converter available for extension");
+                throw new ArgumentOutOfRangeException(nameof(extension), actualValue: extension, message: @"No Converter available for extension");
             }
 
             return converter;

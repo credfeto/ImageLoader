@@ -19,10 +19,10 @@ namespace Credfeto.ImageLoader.Raw
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    mi.Write(ms, MagickFormat.Bmp);
+                    mi.Write(stream: ms, format: MagickFormat.Bmp);
 
                     await ms.FlushAsync();
-                    ms.Seek(offset: 0, SeekOrigin.Begin);
+                    ms.Seek(offset: 0, loc: SeekOrigin.Begin);
 
                     return Image.Load<Rgba32>(ms);
                 }

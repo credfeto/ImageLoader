@@ -35,7 +35,7 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
                 throw new NullException($"Could not fine {fileName}");
             }
 
-            string file = Path.Combine(location, fileName);
+            string file = Path.Combine(path1: location, path2: fileName);
 
             Assert.True(File.Exists(file), $"Could not fine {fileName} at {file}");
 
@@ -45,7 +45,7 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
         [Fact]
         public void Cr2ExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"cr2");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"cr2");
         }
 
         [Fact]
@@ -56,9 +56,9 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
             Assert.NotNull(image);
-            Assert.Equal(expected: 3870, image.Width);
-            Assert.Equal(expected: 5796, image.Height);
-            Assert.Equal(expected: 32, image.PixelType.BitsPerPixel);
+            Assert.Equal(expected: 3870, actual: image.Width);
+            Assert.Equal(expected: 5796, actual: image.Height);
+            Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
         }
 
         [Fact]
@@ -69,15 +69,15 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
             Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
             Assert.NotNull(image);
-            Assert.Equal(expected: 4608, image.Width);
-            Assert.Equal(expected: 3464, image.Height);
-            Assert.Equal(expected: 32, image.PixelType.BitsPerPixel);
+            Assert.Equal(expected: 4608, actual: image.Width);
+            Assert.Equal(expected: 3464, actual: image.Height);
+            Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
         }
 
         [Fact]
         public void Rw2ExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"rw2");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"rw2");
         }
     }
 }

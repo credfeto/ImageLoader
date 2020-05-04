@@ -35,7 +35,7 @@ namespace Credfeto.ImageLoader.Standard.UnitTests
         [Fact]
         public void PngExtensionSupported()
         {
-            Assert.Contains(this._converter.SupportedExtensions, filter: x => x == @"jpg");
+            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
         }
     }
 }
