@@ -17,9 +17,10 @@ jobs:
           echo SHA: $GITHUB_SHA
           echo ::set-env name=GIT_BRANCH::$GITHUB_REF
     - name: Determine .net core version
-      run: |
-          echo .NET Core Version: `sed -n 's|.*"version":\s*"\([^"]*\)".*|\1|p' src/global.json`
-          echo ::set-env name=DOTNET_VERSION::`sed -n 's|.*"version":\s*"\([^"]*\)".*|\1|p' src/global.json`
+      uses: credfeto/action-dotnet-version-detect@master
+#      run: |
+#          echo .NET Core Version: `sed -n 's|.*"version":\s*"\([^"]*\)".*|\1|p' src/global.json`
+#          echo ::set-env name=DOTNET_VERSION::`sed -n 's|.*"version":\s*"\([^"]*\)".*|\1|p' src/global.json`
     - name: Generate build number
       id: buildnumber
       uses: einaregilsson/build-number@v2
