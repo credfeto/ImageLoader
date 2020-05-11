@@ -29,19 +29,19 @@
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.6.13" PrivateAssets="All" />
     <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.13" PrivateAssets="All" />
     <PackageReference Include="Roslynator.Analyzers" Version="2.3.0" PrivateAssets="All" />
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.6.1.17183" PrivateAssets="All" />
-      <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All"/>
-      <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All"/>
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.7.0.17535" PrivateAssets="All" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
+    <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All" />
   </ItemGroup>
-    <ItemGroup>
-        <None Update="test.jpg">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-        <None Update="test.png">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Credfeto.ImageLoader.Standard\Credfeto.ImageLoader.Standard.csproj"/>
-    </ItemGroup>
+  <ItemGroup>
+    <None Update="test.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Credfeto.ImageLoader.Standard\Credfeto.ImageLoader.Standard.csproj" />
+  </ItemGroup>
 </Project>

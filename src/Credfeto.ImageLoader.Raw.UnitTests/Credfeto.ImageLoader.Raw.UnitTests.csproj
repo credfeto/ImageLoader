@@ -29,19 +29,19 @@
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.6.13" PrivateAssets="All" />
     <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.13" PrivateAssets="All" />
     <PackageReference Include="Roslynator.Analyzers" Version="2.3.0" PrivateAssets="All" />
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.6.1.17183" PrivateAssets="All" />
-      <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All"/>
-      <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All"/>
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.7.0.17535" PrivateAssets="All" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
+    <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All" />
   </ItemGroup>
-    <ItemGroup>
-        <Content Include="test.CR2">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-        <Content Include="test.RW2">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Credfeto.ImageLoader.Raw\Credfeto.ImageLoader.Raw.csproj"/>
-    </ItemGroup>
+  <ItemGroup>
+    <Content Include="test.CR2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="test.RW2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Credfeto.ImageLoader.Raw\Credfeto.ImageLoader.Raw.csproj" />
+  </ItemGroup>
 </Project>
