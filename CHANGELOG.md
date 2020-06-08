@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Changed
 - FF-1429 - Updated AsyncFixer to 1.3.0
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.8.0.18411
+- FF-1429 - Updated xunit.runner.visualstudio to 2.4.2
 ### Removed
 ### Deployment Changes
 
