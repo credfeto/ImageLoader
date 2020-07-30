@@ -20,6 +20,15 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [0.1.0] - 2020-07-30
+### Changed
+- Updated to .net core 3.1.302
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.9.0.19135
+- FF-1429 - Updated NSubstitute to 4.2.2
+- FF-1429 - Updated AsyncFixer to 1.3.0
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.8.0.18411
+- FF-1429 - Updated xunit.runner.visualstudio to 2.4.2
+
 ## [0.0.0] - Project created
 
 
