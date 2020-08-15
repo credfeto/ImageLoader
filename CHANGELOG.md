@@ -9,6 +9,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.11.0.20529
 - FF-1429 - Updated Microsoft.CodeAnalysis.FxCopAnalyzers to 3.3.0
 - FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 16.7.54
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.9.0.19135
