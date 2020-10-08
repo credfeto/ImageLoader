@@ -24,7 +24,7 @@ namespace Credfeto.ImageLoader.Raw
                     await ms.FlushAsync();
                     ms.Seek(offset: 0, loc: SeekOrigin.Begin);
 
-                    return Image.Load<Rgba32>(ms);
+                    return await Image.LoadAsync<Rgba32>(ms);
                 }
             }
         }

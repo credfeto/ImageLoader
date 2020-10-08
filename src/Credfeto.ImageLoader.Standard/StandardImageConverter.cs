@@ -17,8 +17,7 @@ namespace Credfeto.ImageLoader.Standard
 
             using (MemoryStream ms = new MemoryStream(buffer: content, writable: false))
             {
-                return Image.Load(ms)
-                            .CloneAs<Rgba32>();
+                return (await Image.LoadAsync(ms)).CloneAs<Rgba32>();
             }
         }
     }
