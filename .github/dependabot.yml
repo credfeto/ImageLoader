@@ -3,7 +3,7 @@ updates:
 
 - package-ecosystem: nuget
   directory: "/"
-  schedule: 
+  schedule:
     interval: daily
     time: "03:00"
     timezone: "Europe/London"
@@ -41,7 +41,7 @@ updates:
     prefix: "[FF-1429]"
   rebase-strategy: "auto"
   labels:
-   - "github-actions"
-   - "dependencies"
-   - "Changelog Not Required"
+  - "github-actions"
+  - "dependencies"
+  - "Changelog Not Required"
 
