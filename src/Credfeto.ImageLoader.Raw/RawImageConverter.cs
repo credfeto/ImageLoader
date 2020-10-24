@@ -17,7 +17,7 @@ namespace Credfeto.ImageLoader.Raw
         {
             using (MagickImage mi = new MagickImage(fileName))
             {
-                using (MemoryStream ms = new MemoryStream())
+                await using (MemoryStream ms = new MemoryStream())
                 {
                     mi.Write(stream: ms, format: MagickFormat.Bmp);
 

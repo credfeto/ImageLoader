@@ -15,7 +15,7 @@ namespace Credfeto.ImageLoader.Standard
         {
             byte[] content = await File.ReadAllBytesAsync(fileName);
 
-            using (MemoryStream ms = new MemoryStream(buffer: content, writable: false))
+            await using (MemoryStream ms = new MemoryStream(buffer: content, writable: false))
             {
                 return (await Image.LoadAsync(ms)).CloneAs<Rgba32>();
             }

@@ -16,7 +16,7 @@ namespace Credfeto.ImageLoader.Photoshop
         {
             byte[] source = await File.ReadAllBytesAsync(fileName);
 
-            using (MemoryStream ms = new MemoryStream(buffer: source, writable: false))
+            await using (MemoryStream ms = new MemoryStream(buffer: source, writable: false))
             {
                 using (PsdDocument psd = PsdDocument.Create(ms))
                 {
