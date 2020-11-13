@@ -9,6 +9,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+- FF-1429 - Updated Microsoft.Extensions to 5.0.0
 - FF-1429 - Updated NSubstitute.Analyzers.CSharp to 1.0.14
 - FF-1429 - Updated Microsoft.NET.Test.Sdk to 16.8.0
 - FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 16.8.55
