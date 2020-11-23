@@ -16,13 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.3.3
+      with:
+        fetch-depth: 0
     - name: Fetch tags and master
       run: |
-          git fetch --tags
-          echo REF: $GITHUB_REF
-          echo SHA: $GITHUB_SHA
-          echo GIT_BRANCH=$GITHUB_REF >> $GITHUB_ENV
+        git fetch --tags
+        echo REF: $GITHUB_REF
+        echo SHA: $GITHUB_SHA
+        echo GIT_BRANCH=$GITHUB_REF >> $GITHUB_ENV
+        git branch --remote
     - name: Determine .net core version
       uses: credfeto/action-dotnet-version-detect@v1.1.1
     - name: Setup .NET Core
@@ -31,6 +34,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+    - if: env.DOTNET_VERSION != '5.0.100'
+      uses: actions/setup-dotnet@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        dotnet-version: '5.0.100'
     - name: Enable dotnet tools
       run: dotnet new tool-manifest
     - name: Install Build Version Tool
@@ -50,3 +59,7 @@ jobs:
     - name: Publish
       run: |
         dotnet pushpackages -folder dist --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
+    - name: Create Release Notes
+      run: |
+        dotnet tool install --local Credfeto.ChangeLog.Cmd --version ${{ env.BUILD_VERSION }} --add-source dist
+        dotnet changelog -changelog CHANGELOG.md -extract RELEASE_NOTES.md -version ${{ env.BUILD_VERSION }}
