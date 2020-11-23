@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.0] - 2020-11-23
+### Changed
 - FF-1429 - Updated NSubstitute.Analyzers.CSharp to 1.0.14
 - FF-1429 - Updated Microsoft.NET.Test.Sdk to 16.8.0
 - FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 16.8.55
@@ -32,12 +40,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.8.0.18411
 - FF-1429 - Updated xunit.runner.visualstudio to 2.4.2
 - Updated to .net 5.0
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [0.1.0] - 2020-07-30
 ### Changed
 - Updated to .net core 3.1.302
