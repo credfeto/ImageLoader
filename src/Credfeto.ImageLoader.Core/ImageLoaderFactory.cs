@@ -35,7 +35,7 @@ namespace Credfeto.ImageLoader.Core
 
         public bool CanLoad(string fileName)
         {
-            return this._converters.TryGetValue(GetExtension(fileName), out IImageConverter converter) && converter != null;
+            return this._converters.TryGetValue(GetExtension(fileName), out IImageConverter? _);
         }
 
         public IReadOnlyCollection<string> SupportedExtensions { get; }
@@ -48,7 +48,7 @@ namespace Credfeto.ImageLoader.Core
 
         private static Dictionary<string, IImageConverter> LoadConverters(IEnumerable<IImageConverter> converters)
         {
-            Dictionary<string, IImageConverter> supportedConverters = new Dictionary<string, IImageConverter>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, IImageConverter> supportedConverters = new(StringComparer.OrdinalIgnoreCase);
 
             foreach (IImageConverter converter in converters)
             {
@@ -68,7 +68,7 @@ namespace Credfeto.ImageLoader.Core
 
         private IImageConverter FindConverter(string extension)
         {
-            if (!this._converters.TryGetValue(key: extension, out IImageConverter converter) || converter == null)
+            if (!this._converters.TryGetValue(key: extension, out IImageConverter? converter) || converter == null)
             {
                 throw new ArgumentOutOfRangeException(nameof(extension), actualValue: extension, message: @"No Converter available for extension");
             }

@@ -15,11 +15,11 @@ namespace Credfeto.ImageLoader.Raw
 
         public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
         {
-            using (MagickImage mi = new MagickImage(fileName))
+            using (MagickImage mi = new(fileName))
             {
-                await using (MemoryStream ms = new MemoryStream())
+                await using (MemoryStream ms = new())
                 {
-                    mi.Write(stream: ms, format: MagickFormat.Bmp);
+                    await mi.WriteAsync(stream: ms, format: MagickFormat.Bmp);
 
                     await ms.FlushAsync();
                     ms.Seek(offset: 0, loc: SeekOrigin.Begin);
