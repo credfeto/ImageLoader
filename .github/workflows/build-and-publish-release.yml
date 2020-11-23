@@ -39,9 +39,11 @@ jobs:
     - name: Enable dotnet tools
       run: dotnet new tool-manifest
     - name: Install Build Version Tool
-      run: dotnet tool install --local FunFair.BuildVersion --add-source ${{ secrets.FUNFAIR_NUGET_FEED }}
+      run: dotnet tool install --local FunFair.BuildVersion
     - name: Install Multi-Push Tool
       run: dotnet tool install --local Credfeto.Package.Push
+    - name: Install Changelog Tool
+      run: dotnet tool install --local Credfeto.ChangeLog.Cmd
     - name: Set Define Build Version
       run: dotnet buildversion $GITHUB_RUN_NUMBER
     - name: Build with dotnet
@@ -57,7 +59,6 @@ jobs:
         dotnet pushpackages -folder dist --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
     - name: Create Release Notes
       run: |
-        dotnet tool install --local Credfeto.ChangeLog.Cmd --version ${{ env.BUILD_VERSION }} --add-source dist
         dotnet changelog -changelog CHANGELOG.md -extract RELEASE_NOTES.md -version ${{ env.BUILD_VERSION }}
     - name: Create Release
       id: create_release
