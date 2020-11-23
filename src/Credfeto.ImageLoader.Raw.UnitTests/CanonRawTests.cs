@@ -12,6 +12,8 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
 {
     public sealed class CanonRawTests
     {
+        private readonly IImageConverter _converter;
+
         public CanonRawTests()
         {
             IServiceCollection services = new ServiceCollection();
@@ -20,11 +22,9 @@ namespace Credfeto.ImageLoader.Raw.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            this._converter = serviceProvider.GetService<IImageConverter>();
+            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
             Assert.NotNull(this._converter);
         }
-
-        private readonly IImageConverter _converter;
 
         private static string FindTestFile(string fileName)
         {

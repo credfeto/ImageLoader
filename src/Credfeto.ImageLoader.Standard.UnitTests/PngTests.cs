@@ -10,6 +10,8 @@ namespace Credfeto.ImageLoader.Standard.UnitTests
 {
     public sealed class PngTests
     {
+        private readonly IImageConverter _converter;
+
         public PngTests()
         {
             IServiceCollection services = new ServiceCollection();
@@ -18,11 +20,9 @@ namespace Credfeto.ImageLoader.Standard.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            this._converter = serviceProvider.GetService<IImageConverter>();
+            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
             Assert.NotNull(this._converter);
         }
-
-        private readonly IImageConverter _converter;
 
         [Fact]
         public async Task LoadPngAsync()

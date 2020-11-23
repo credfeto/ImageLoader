@@ -11,6 +11,8 @@ namespace Credfeto.ImageLoader.Photoshop.UnitTests
 {
     public sealed class PhotoshopTests
     {
+        private readonly IImageConverter _converter;
+
         public PhotoshopTests()
         {
             IServiceCollection services = new ServiceCollection();
@@ -19,11 +21,9 @@ namespace Credfeto.ImageLoader.Photoshop.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            this._converter = serviceProvider.GetService<IImageConverter>();
+            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
             Assert.NotNull(this._converter);
         }
-
-        private readonly IImageConverter _converter;
 
         [Fact]
         public async Task LoadPsdAsync()

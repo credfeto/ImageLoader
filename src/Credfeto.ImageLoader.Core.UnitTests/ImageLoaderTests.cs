@@ -27,7 +27,7 @@ namespace Credfeto.ImageLoader.Core.UnitTests
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            IImageLoader il = serviceProvider.GetService<IImageLoader>();
+            IImageLoader il = serviceProvider.GetRequiredService<IImageLoader>();
             Assert.NotNull(il);
         }
 
