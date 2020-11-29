@@ -13,11 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2.3.4
-<<<<<<< HEAD
-      with:
-        fetch-depth: 0
-=======
->>>>>>> 5c86b1f... Updated workflow
     - name: Fetch tags and master
       run: |
           git fetch --tags
