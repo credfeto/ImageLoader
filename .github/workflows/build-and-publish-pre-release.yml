@@ -37,6 +37,8 @@ jobs:
       run: dotnet tool install --local FunFair.BuildVersion
     - name: Install Multi-Push Tool
       run: dotnet tool install --local Credfeto.Package.Push
+    - name: Install ChangeLog Tool
+      run: dotnet tool install --local Credfeto.ChangeLog.Cmd
     - name: Set Define Build Version
       run: dotnet buildversion $GITHUB_RUN_NUMBER
     - name: Create Release Notes
