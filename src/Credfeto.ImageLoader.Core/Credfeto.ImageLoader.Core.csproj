@@ -20,6 +20,19 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Mark Ridgwell</Authors>
+    <Company>Mark Ridgwell</Company>
+    <Copyright>Mark Ridgwell</Copyright>
+    <Product>Image Loader</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Image Loading core libraries.</Description>
+    <PackageTags>Image;loader</PackageTags>
+    <RepositoryUrl>https://github.com/credfeto/ImageLoader</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
