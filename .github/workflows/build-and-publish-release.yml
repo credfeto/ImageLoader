@@ -51,7 +51,9 @@ jobs:
     - name: Pack tool
       run: |
         cd src
-        dotnet pack --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore --output ../dist --include-source --include-symbols -p:SymbolPackageFormat=snupkg /p:ReleaseNotes="${{ steps.release-notes.outputs.content }}"
+        dotnet pack --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore --output ../dist --include-source --include-symbols -p:SymbolPackageFormat=snupkg
+      env:
+        ReleaseNotes: ${{ steps.release-notes.outputs.content }}
     - name: Publish
       run: |
         dotnet pushpackages -folder dist --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
