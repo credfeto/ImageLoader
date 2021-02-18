@@ -34,7 +34,7 @@
     <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.2" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.3" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
