@@ -1,45 +1,45 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <OutputType>Library</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
-        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
-        <WarningsAsErrors />
-        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-        <NoWarn>1591</NoWarn>
-        <LangVersion>latest</LangVersion>
-        <Features>strict;flow-analysis</Features>
-        <Nullable>enable</Nullable>
-        <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
-        <IsPackable>false</IsPackable>
-    </PropertyGroup>
-    <PropertyGroup>
-        <AnalysisLevel>latest</AnalysisLevel>
-        <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-        <EnableNETAnalyzers>true</EnableNETAnalyzers>
-        <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
-        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-        <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
-    </PropertyGroup>
-    <ItemGroup>
-        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Credfeto.ImageLoader.Core\Credfeto.ImageLoader.Core.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
-        <PackageReference Include="NSubstitute" Version="4.2.2" />
-        <PackageReference Include="xunit" Version="2.4.1" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
-        <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.63" PrivateAssets="All" />
-        <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.14" PrivateAssets="All" />
-        <PackageReference Include="Roslynator.Analyzers" Version="3.2.2" PrivateAssets="All" />
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.29.0.36737" PrivateAssets="All" />
-        <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
-        <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All" />
-    </ItemGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+    <WarningsAsErrors />
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+    <LangVersion>latest</LangVersion>
+    <Features>strict;flow-analysis</Features>
+    <Nullable>enable</Nullable>
+    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Credfeto.ImageLoader.Core\Credfeto.ImageLoader.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.63" PrivateAssets="All" />
+    <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.14" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Analyzers" Version="3.2.2" PrivateAssets="All" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.29.0.36737" PrivateAssets="All" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
+    <PackageReference Include="xunit.analyzers" Version="0.10.0" PrivateAssets="All" />
+  </ItemGroup>
 </Project>
