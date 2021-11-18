@@ -9,18 +9,27 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: 0
     - name: Fetch tags and master
       run: |
-          git fetch --tags
-          echo REF: $GITHUB_REF
-          echo SHA: $GITHUB_SHA
-          echo GIT_BRANCH=$GITHUB_REF >> $GITHUB_ENV
+        git fetch --tags
+        echo REF: $GITHUB_REF
+        echo SHA: $GITHUB_SHA
+        echo GIT_BRANCH=$GITHUB_REF >> $GITHUB_ENV
+        git branch --remote
     - name: Determine .net core version
       uses: credfeto/action-dotnet-version-detect@v1.1.1
+    - name: Setup .NET Core (Old)
+      uses: actions/setup-dotnet@v1.8.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        dotnet-version: 5.0.403
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1.8.0
       env:
@@ -33,8 +42,8 @@ jobs:
       run: dotnet tool install --local FunFair.BuildVersion
     - name: Install Multi-Push Tool
       run: dotnet tool install --local Credfeto.Package.Push
-    - name: Install ChangeLog Tool
-      run: dotnet tool install --local Credfeto.ChangeLog.Cmd
+    - name: Install Changelog Tool
+      run: dotnet tool install --local Credfeto.Changelog.Cmd
     - name: Set Define Build Version
       run: dotnet buildversion --BuildNumber $GITHUB_RUN_NUMBER
     - name: Create Release Notes
@@ -51,9 +60,12 @@ jobs:
     - name: Pack tool
       run: |
         cd src
-        dotnet pack --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-build --no-restore --output ../dist --include-source --include-symbols -p:SymbolPackageFormat=snupkg
+        dotnet pack --configuration Release /p:Version=${{ env.BUILD_VERSION }} --no-restore --output ../dist
       env:
         ReleaseNotes: ${{ steps.release-notes.outputs.content }}
+    - name: Update Release Notes with new tool
+      run: |
+        dotnet changelog --changelog CHANGELOG.md --extract RELEASE_NOTES.md --version ${{ env.BUILD_VERSION }}
     - name: Publish
       run: |
         dotnet pushpackages -folder dist --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_FEED }}
