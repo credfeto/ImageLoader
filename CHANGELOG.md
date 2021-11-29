@@ -47,6 +47,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated NSubstitute.Analyzers.CSharp to 1.0.15
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.32.0.39516
 - FF-1429 - Updated DotNet SDK to 6.0.100
+- FF-1429 - Updated Roslynator.Analyzers to 3.3.0
 ### Removed
 ### Deployment Changes
 
