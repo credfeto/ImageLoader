@@ -68,7 +68,7 @@ namespace Credfeto.ImageLoader.Core
 
         private IImageConverter FindConverter(string extension)
         {
-            if (!this._converters.TryGetValue(key: extension, out IImageConverter? converter) || converter == null)
+            if (!this._converters.TryGetValue(key: extension, out IImageConverter? converter))
             {
                 throw new ArgumentOutOfRangeException(nameof(extension), actualValue: extension, message: @"No Converter available for extension");
             }
