@@ -7,42 +7,41 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 
-namespace Credfeto.ImageLoader.Standard.UnitTests
+namespace Credfeto.ImageLoader.Standard.UnitTests;
+
+public sealed class JpegTests : TestBase
 {
-    public sealed class JpegTests : TestBase
+    private readonly IImageConverter _converter;
+
+    public JpegTests()
     {
-        private readonly IImageConverter _converter;
+        IServiceCollection services = new ServiceCollection();
 
-        public JpegTests()
-        {
-            IServiceCollection services = new ServiceCollection();
+        ImageLoaderStandardSetup.Configure(services);
 
-            ImageLoaderStandardSetup.Configure(services);
+        IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            IServiceProvider serviceProvider = services.BuildServiceProvider();
+        this._converter = serviceProvider.GetRequiredService<IImageConverter>();
+        Assert.NotNull(this._converter);
+    }
 
-            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
-            Assert.NotNull(this._converter);
-        }
+    [Fact]
+    public void JpegExtensionSupported()
+    {
+        Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpeg");
+    }
 
-        [Fact]
-        public void JpegExtensionSupported()
-        {
-            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpeg");
-        }
+    [Fact]
+    public void JpgExtensionSupported()
+    {
+        Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
+    }
 
-        [Fact]
-        public void JpgExtensionSupported()
-        {
-            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
-        }
+    [Fact]
+    public async Task LoadJpgAsync()
+    {
+        Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.jpg");
 
-        [Fact]
-        public async Task LoadJpgAsync()
-        {
-            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.jpg");
-
-            Assert.NotNull(image);
-        }
+        Assert.NotNull(image);
     }
 }

@@ -9,76 +9,75 @@ using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 using Xunit.Sdk;
 
-namespace Credfeto.ImageLoader.Raw.UnitTests
+namespace Credfeto.ImageLoader.Raw.UnitTests;
+
+public sealed class CanonRawTests : TestBase
 {
-    public sealed class CanonRawTests : TestBase
+    private readonly IImageConverter _converter;
+
+    public CanonRawTests()
     {
-        private readonly IImageConverter _converter;
+        IServiceCollection services = new ServiceCollection();
 
-        public CanonRawTests()
+        ImageLoaderRawSetup.Configure(services);
+
+        IServiceProvider serviceProvider = services.BuildServiceProvider();
+
+        this._converter = serviceProvider.GetRequiredService<IImageConverter>();
+        Assert.NotNull(this._converter);
+    }
+
+    private static string FindTestFile(string fileName)
+    {
+        string? location = Path.GetDirectoryName(typeof(CanonRawTests).Assembly.Location);
+
+        if (location == null)
         {
-            IServiceCollection services = new ServiceCollection();
-
-            ImageLoaderRawSetup.Configure(services);
-
-            IServiceProvider serviceProvider = services.BuildServiceProvider();
-
-            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
-            Assert.NotNull(this._converter);
+            throw new NullException($"Could not fine {fileName}");
         }
 
-        private static string FindTestFile(string fileName)
-        {
-            string? location = Path.GetDirectoryName(typeof(CanonRawTests).Assembly.Location);
+        string file = Path.Combine(path1: location, path2: fileName);
 
-            if (location == null)
-            {
-                throw new NullException($"Could not fine {fileName}");
-            }
+        Assert.True(File.Exists(file), $"Could not fine {fileName} at {file}");
 
-            string file = Path.Combine(path1: location, path2: fileName);
+        return file;
+    }
 
-            Assert.True(File.Exists(file), $"Could not fine {fileName} at {file}");
+    [Fact]
+    public void Cr2ExtensionSupported()
+    {
+        Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"cr2");
+    }
 
-            return file;
-        }
+    [Fact]
+    public async Task LoadCr2Async()
+    {
+        string fileName = FindTestFile(fileName: @"test.CR2");
 
-        [Fact]
-        public void Cr2ExtensionSupported()
-        {
-            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"cr2");
-        }
+        Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
-        [Fact]
-        public async Task LoadCr2Async()
-        {
-            string fileName = FindTestFile(fileName: @"test.CR2");
+        Assert.NotNull(image);
+        Assert.Equal(expected: 3870, actual: image.Width);
+        Assert.Equal(expected: 5796, actual: image.Height);
+        Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
+    }
 
-            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
+    [Fact]
+    public async Task LoadRw2Async()
+    {
+        string fileName = FindTestFile(fileName: @"test.RW2");
 
-            Assert.NotNull(image);
-            Assert.Equal(expected: 3870, actual: image.Width);
-            Assert.Equal(expected: 5796, actual: image.Height);
-            Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
-        }
+        Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
-        [Fact]
-        public async Task LoadRw2Async()
-        {
-            string fileName = FindTestFile(fileName: @"test.RW2");
+        Assert.NotNull(image);
+        Assert.Equal(expected: 4608, actual: image.Width);
+        Assert.Equal(expected: 3464, actual: image.Height);
+        Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
+    }
 
-            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
-
-            Assert.NotNull(image);
-            Assert.Equal(expected: 4608, actual: image.Width);
-            Assert.Equal(expected: 3464, actual: image.Height);
-            Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
-        }
-
-        [Fact]
-        public void Rw2ExtensionSupported()
-        {
-            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"rw2");
-        }
+    [Fact]
+    public void Rw2ExtensionSupported()
+    {
+        Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"rw2");
     }
 }

@@ -7,36 +7,35 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 
-namespace Credfeto.ImageLoader.Standard.UnitTests
+namespace Credfeto.ImageLoader.Standard.UnitTests;
+
+public sealed class PngTests : TestBase
 {
-    public sealed class PngTests : TestBase
+    private readonly IImageConverter _converter;
+
+    public PngTests()
     {
-        private readonly IImageConverter _converter;
+        IServiceCollection services = new ServiceCollection();
 
-        public PngTests()
-        {
-            IServiceCollection services = new ServiceCollection();
+        ImageLoaderStandardSetup.Configure(services);
 
-            ImageLoaderStandardSetup.Configure(services);
+        IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-            IServiceProvider serviceProvider = services.BuildServiceProvider();
+        this._converter = serviceProvider.GetRequiredService<IImageConverter>();
+        Assert.NotNull(this._converter);
+    }
 
-            this._converter = serviceProvider.GetRequiredService<IImageConverter>();
-            Assert.NotNull(this._converter);
-        }
+    [Fact]
+    public async Task LoadPngAsync()
+    {
+        Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.png");
 
-        [Fact]
-        public async Task LoadPngAsync()
-        {
-            Image<Rgba32> image = await this._converter.LoadImageAsync(fileName: @"test.png");
+        Assert.NotNull(image);
+    }
 
-            Assert.NotNull(image);
-        }
-
-        [Fact]
-        public void PngExtensionSupported()
-        {
-            Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
-        }
+    [Fact]
+    public void PngExtensionSupported()
+    {
+        Assert.Contains(collection: this._converter.SupportedExtensions, filter: x => x == @"jpg");
     }
 }

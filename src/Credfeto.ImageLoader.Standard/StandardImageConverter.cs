@@ -5,20 +5,19 @@ using Credfeto.ImageLoader.Interfaces;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace Credfeto.ImageLoader.Standard
+namespace Credfeto.ImageLoader.Standard;
+
+public sealed class StandardImageConverter : IImageConverter
 {
-    public sealed class StandardImageConverter : IImageConverter
+    public IReadOnlyList<string> SupportedExtensions => new[] { @"jpg", @"jpeg", @"bmp", @"png" };
+
+    public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
     {
-        public IReadOnlyList<string> SupportedExtensions => new[] {@"jpg", @"jpeg", @"bmp", @"png"};
+        byte[] content = await File.ReadAllBytesAsync(fileName);
 
-        public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
+        await using (MemoryStream ms = new(buffer: content, writable: false))
         {
-            byte[] content = await File.ReadAllBytesAsync(fileName);
-
-            await using (MemoryStream ms = new MemoryStream(buffer: content, writable: false))
-            {
-                return (await Image.LoadAsync(ms)).CloneAs<Rgba32>();
-            }
+            return (await Image.LoadAsync(ms)).CloneAs<Rgba32>();
         }
     }
 }

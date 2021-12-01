@@ -3,14 +3,13 @@ using System.Threading.Tasks;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace Credfeto.ImageLoader.Interfaces
+namespace Credfeto.ImageLoader.Interfaces;
+
+public interface IImageLoader
 {
-    public interface IImageLoader
-    {
-        IReadOnlyCollection<string> SupportedExtensions { get; }
+    IReadOnlyCollection<string> SupportedExtensions { get; }
 
-        Task<Image<Rgba32>> LoadImageAsync(string fileName);
+    Task<Image<Rgba32>> LoadImageAsync(string fileName);
 
-        bool CanLoad(string fileName);
-    }
+    bool CanLoad(string fileName);
 }
