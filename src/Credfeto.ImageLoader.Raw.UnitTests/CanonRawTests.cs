@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Credfeto.ImageLoader.Interfaces;
+using FunFair.Test.Common;
 using Microsoft.Extensions.DependencyInjection;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -10,7 +11,7 @@ using Xunit.Sdk;
 
 namespace Credfeto.ImageLoader.Raw.UnitTests
 {
-    public sealed class CanonRawTests
+    public sealed class CanonRawTests : TestBase
     {
         private readonly IImageConverter _converter;
 

@@ -1,12 +1,13 @@
 using System;
 using Credfeto.ImageLoader.Interfaces;
+using FunFair.Test.Common;
 using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 using Xunit;
 
 namespace Credfeto.ImageLoader.Core.UnitTests
 {
-    public sealed class ImageLoaderTests
+    public sealed class ImageLoaderTests : TestBase
     {
         [Fact]
         public void DoesNotThrowIfMultipleConvertersRegistered()

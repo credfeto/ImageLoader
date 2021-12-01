@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Credfeto.ImageLoader.Interfaces;
+using FunFair.Test.Common;
 using Microsoft.Extensions.DependencyInjection;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -9,7 +10,7 @@ using Xunit;
 
 namespace Credfeto.ImageLoader.Photoshop.UnitTests
 {
-    public sealed class PhotoshopTests
+    public sealed class PhotoshopTests : TestBase
     {
         private readonly IImageConverter _converter;
 

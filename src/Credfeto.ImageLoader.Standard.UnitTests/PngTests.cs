@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Credfeto.ImageLoader.Interfaces;
+using FunFair.Test.Common;
 using Microsoft.Extensions.DependencyInjection;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -8,7 +9,7 @@ using Xunit;
 
 namespace Credfeto.ImageLoader.Standard.UnitTests
 {
-    public sealed class PngTests
+    public sealed class PngTests : TestBase
     {
         private readonly IImageConverter _converter;
 
