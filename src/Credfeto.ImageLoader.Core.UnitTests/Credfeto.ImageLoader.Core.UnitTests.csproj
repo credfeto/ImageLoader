@@ -27,9 +27,6 @@
         <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
     <ItemGroup>
-        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
-    </ItemGroup>
-    <ItemGroup>
         <ProjectReference Include="..\Credfeto.ImageLoader.Core\Credfeto.ImageLoader.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
