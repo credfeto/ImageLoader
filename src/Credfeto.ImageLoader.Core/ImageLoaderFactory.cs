@@ -58,7 +58,7 @@ namespace Credfeto.ImageLoader.Core
                 }
             }
 
-            if (!supportedConverters.Any())
+            if (supportedConverters.Count == 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(converters), actualValue: converters, message: "No Converters Loaded");
             }
