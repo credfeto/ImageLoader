@@ -16,14 +16,14 @@ namespace Credfeto.ImageLoader.Core.UnitTests
             ImageLoaderCoreSetup.Configure(services);
 
             IImageConverter ic1 = Substitute.For<IImageConverter>();
-            ic1.SupportedExtensions.Returns(new[] {".jpg", ".jpeg"});
+            ic1.SupportedExtensions.Returns(new[] { ".jpg", ".jpeg" });
 
-            services.AddSingleton(ic1);
+            services = services.AddSingleton(ic1);
 
             IImageConverter ic2 = Substitute.For<IImageConverter>();
-            ic2.SupportedExtensions.Returns(new[] {".png"});
+            ic2.SupportedExtensions.Returns(new[] { ".png" });
 
-            services.AddSingleton(ic2);
+            services = services.AddSingleton(ic2);
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
 
