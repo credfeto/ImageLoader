@@ -49,6 +49,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated DotNet SDK to 6.0.100
 - FF-1429 - Updated Roslynator.Analyzers to 3.3.0
 - FF-1429 - Updated FunFair.Test.Common to 5.7.0.1478
+- FF-1429 - Updated FunFair.CodeAnalysis to 5.7.3.1052
 ### Removed
 ### Deployment Changes
 

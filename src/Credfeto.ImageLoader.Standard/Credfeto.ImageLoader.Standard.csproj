@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-      <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
-      <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
-      <EnablePackageValidation>true</EnablePackageValidation>
-      <Features>strict;flow-analysis</Features>
-      <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
-      <ImplicitUsings>disable</ImplicitUsings>
-      <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
-      <IsPackable>true</IsPackable>
-      <IsPublishable>false</IsPublishable>
-      <LangVersion>latest</LangVersion>
-      <NoWarn>1591</NoWarn>
-      <Nullable>enable</Nullable>
-      <OutputType>Library</OutputType>
-      <TargetFramework>net6.0</TargetFramework>
-      <TieredCompilation>true</TieredCompilation>
-      <TreatSpecificWarningsAsErrors/>
-      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-      <WarningsAsErrors/>
+        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
+        <EnablePackageValidation>true</EnablePackageValidation>
+        <Features>strict;flow-analysis</Features>
+        <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+        <IsPackable>true</IsPackable>
+        <IsPublishable>false</IsPublishable>
+        <LangVersion>latest</LangVersion>
+        <NoWarn>1591</NoWarn>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <TieredCompilation>true</TieredCompilation>
+        <TreatSpecificWarningsAsErrors />
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsAsErrors />
     </PropertyGroup>
     <PropertyGroup>
         <AnalysisLevel>latest</AnalysisLevel>
@@ -44,19 +44,19 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All"/>
-      <PackageReference Include="codecracker.CSharp" Version="1.1.0" PrivateAssets="All"/>
-      <PackageReference Include="FunFair.CodeAnalysis" Version="5.7.0.995" PrivateAssets="All"/>
-      <PackageReference Include="Meziantou.Analyzer" Version="1.0.679" PrivateAssets="All"/>
-      <PackageReference Include="Microsoft.CodeAnalysis.VersionCheckAnalyzer" Version="3.3.2" PrivateAssets="All"/>
-      <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.64" PrivateAssets="All"/>
-      <PackageReference Include="Nullable.Extended.Analyzer" Version="1.10.4539" PrivateAssets="All"/>
-      <PackageReference Include="Philips.CodeAnalysis.DuplicateCodeAnalyzer" Version="1.1.4" PrivateAssets="All"/>
-      <PackageReference Include="Roslynator.Analyzers" Version="3.3.0" PrivateAssets="All"/>
-      <PackageReference Include="SecurityCodeScan.VS2019" Version="5.2.1" PrivateAssets="All"/>
-      <PackageReference Include="SmartAnalyzers.CSharpExtensions.Annotations" Version="4.1.0" PrivateAssets="All"/>
-      <PackageReference Include="SonarAnalyzer.CSharp" Version="8.32.0.39516" PrivateAssets="All"/>
-      <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All"/>
+        <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
+        <PackageReference Include="codecracker.CSharp" Version="1.1.0" PrivateAssets="All" />
+        <PackageReference Include="FunFair.CodeAnalysis" Version="5.7.3.1052" PrivateAssets="All" />
+        <PackageReference Include="Meziantou.Analyzer" Version="1.0.679" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.CodeAnalysis.VersionCheckAnalyzer" Version="3.3.2" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.0.64" PrivateAssets="All" />
+        <PackageReference Include="Nullable.Extended.Analyzer" Version="1.10.4539" PrivateAssets="All" />
+        <PackageReference Include="Philips.CodeAnalysis.DuplicateCodeAnalyzer" Version="1.1.4" PrivateAssets="All" />
+        <PackageReference Include="Roslynator.Analyzers" Version="3.3.0" PrivateAssets="All" />
+        <PackageReference Include="SecurityCodeScan.VS2019" Version="5.2.1" PrivateAssets="All" />
+        <PackageReference Include="SmartAnalyzers.CSharpExtensions.Annotations" Version="4.1.0" PrivateAssets="All" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.32.0.39516" PrivateAssets="All" />
+        <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Credfeto.ImageLoader.Interfaces\Credfeto.ImageLoader.Interfaces.csproj" />
