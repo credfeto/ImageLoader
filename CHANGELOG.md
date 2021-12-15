@@ -54,6 +54,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated SmartAnalyzers.CSharpExtensions.Annotations to 4.2.1
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.33.0.40503
 - FF-1429 - Updated SecurityCodeScan.VS2019 to 5.6.0
+- FF-1429 - Updated FunFair.Test.Common to 5.7.2.1514
 ### Removed
 ### Deployment Changes
 
