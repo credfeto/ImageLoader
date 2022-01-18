@@ -1,7 +1,10 @@
 name: Pull Request
 on:
+  # https://securitylab.github.com/research/github-actions-preventing-pwn-requests
+  # could and should work, at least for public repos;
+  # tracking issue for this action's issue:
+  # https://github.com/ahmadnassri/action-dependabot-auto-merge/issues/60
   pull_request_target:
-    types: [labeled]
 
 jobs:
   enable-auto-merge:
@@ -16,10 +19,16 @@ jobs:
         merge-method: "MERGE"
 
   auto_approve_dependabot:
-    runs-on: ubuntu-latest:
+    runs-on: 
+      ubuntu-latest:
 
     if: contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
-    - uses: hmarr/auto-approve-action@v2
+    - uses: ahmadnassri/action-dependabot-auto-merge@v2
       with:
-        github-token: "${{ secrets.SOURCE_PUSH_TOKEN }}"
+        target: patch
+        # Note: This needs to be a PAT with (public) repo rights,
+        #       PAT-owning user needs to have write access to this repo
+        #       (dependabot needs to recognize the comment as coming from an allowed reviewer)
+        github-token: ${{ secrets.SOURCE_PUSH_TOKEN }}
+        
