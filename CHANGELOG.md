@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.4] - 2022-01-31
+### Changed
 - FF-1429 - Updated Microsoft.NET.Test.Sdk to 16.8.3
 - FF-1429 - Updated Microsoft.Extensions to 5.0.1
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.16.0.25740
@@ -74,12 +82,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated FunFair.Test.Common to 5.8.2.1611
 - FF-1429 - Updated FunFair.Test.Common to 5.8.2.1613
 - FF-1429 - Updated Roslynator.Analyzers to 4.0.2
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.0] - 2020-11-23
 ### Changed
 - FF-1429 - Updated NSubstitute.Analyzers.CSharp to 1.0.14
