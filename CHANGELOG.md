@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Changed
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.35.0.42613
 - FF-1429 - Updated FunFair.Test.Common to 5.8.3.1625
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.689
 ### Removed
 ### Deployment Changes
 
