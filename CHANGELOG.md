@@ -9,15 +9,18 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated Meziantou.Analyzer to 1.0.690
-- FF-1429 - Updated Meziantou.Analyzer to 1.0.692
-- FF-1429 - Updated Meziantou.Analyzer to 1.0.693
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.6] - 2022-02-04
+### Changed
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.690
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.692
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.693
+
 ## [1.0.5] - 2022-02-02
 ### Changed
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.35.0.42613
