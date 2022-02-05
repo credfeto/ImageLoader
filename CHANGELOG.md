@@ -9,14 +9,17 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated Meziantou.Analyzer to 1.0.694
-- FF-1429 - Updated FunFair.Test.Common to 5.8.4.1638
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.7] - 2022-02-05
+### Changed
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.694
+- FF-1429 - Updated FunFair.Test.Common to 5.8.4.1638
+
 ## [1.0.6] - 2022-02-04
 ### Changed
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.690
