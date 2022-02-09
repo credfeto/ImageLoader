@@ -9,16 +9,19 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.Test.Common to 5.8.5.1649
-- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.0.1196
-- FF-1429 - Updated FunFair.Test.Common to 5.9.0.1658
-- FF-3881 - Updated DotNet SDK to 6.0.102
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.8] - 2022-02-09
+### Changed
+- FF-1429 - Updated FunFair.Test.Common to 5.8.5.1649
+- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.0.1196
+- FF-1429 - Updated FunFair.Test.Common to 5.9.0.1658
+- FF-3881 - Updated DotNet SDK to 6.0.102
+
 ## [1.0.7] - 2022-02-05
 ### Changed
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.694
