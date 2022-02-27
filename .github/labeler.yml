@@ -1,2 +1,52 @@
+"C#":
+ - any: [ './**/*.cs', './**/*.csproj' ]
+"C# Project":
+ - any: [ './**/*.csproj' ]
+"C# Solution":
+ - any: [ './**/*.sln' ]
+"Powershell":
+ - any: [ './**/*.ps1', './**/*.psm1' ]
+"SQL":
+ - any: [ './**/*.sql', 'db/**/*' ]
+"Solidity":
+ - any: [ './**/*.sol' ]
+"unit-tests":
+ - any: [ 'src/*.Tests.*/**/*', 'src/*.Tests.Integration.*/**/*', 'src/*.Tests.Integration/**/*', 'src/*.Tests/**/*' ]
+".NET update":
+ - any: [ 'src/global.json' ]
 "Config Change":
  - any: [ 'src/**/*.json', '!src/global.json' ]
+"Static Code Analysis Rules":
+ - any: [ 'src/CodeAnalysis.ruleset' ]
+"Migration Script":
+ - any: [ 'tools/MigrationScripts/**/*' ]
+"Legal Text":
+ - any: [ 'tools/LegalText/**/*' ]
+"Change Log":
+ - any: [ 'CHANGELOG.md' ]
+"Read Me":
+ - any: [ 'README.md' ]
+"Setup":
+ - any: [ 'SETUP.md' ]
+"Markdown":
+ - any: [ './**/*.md' ]
+"github-actions":
+ - any: [ '.github/workflows/*.yml' ]
+"Credfeto.ImageLoader.Core":
+ - any: [ 'src/Credfeto.ImageLoader.Core/**/*' ]
+"Credfeto.ImageLoader.Core.UnitTests":
+ - any: [ 'src/Credfeto.ImageLoader.Core.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Interfaces":
+ - any: [ 'src/Credfeto.ImageLoader.Interfaces/**/*' ]
+"Credfeto.ImageLoader.Photoshop":
+ - any: [ 'src/Credfeto.ImageLoader.Photoshop/**/*' ]
+"Credfeto.ImageLoader.Photoshop.UnitTests":
+ - any: [ 'src/Credfeto.ImageLoader.Photoshop.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Raw":
+ - any: [ 'src/Credfeto.ImageLoader.Raw/**/*' ]
+"Credfeto.ImageLoader.Raw.UnitTests":
+ - any: [ 'src/Credfeto.ImageLoader.Raw.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Standard":
+ - any: [ 'src/Credfeto.ImageLoader.Standard/**/*' ]
+"Credfeto.ImageLoader.Standard.UnitTests":
+ - any: [ 'src/Credfeto.ImageLoader.Standard.UnitTests/**/*' ]
