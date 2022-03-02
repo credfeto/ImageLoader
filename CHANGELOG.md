@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 5.9.2.1676
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.36.0.43782
+- FF-1429 - Updated SecurityCodeScan.VS2019 to 5.6.1
 ### Removed
 ### Deployment Changes
 
