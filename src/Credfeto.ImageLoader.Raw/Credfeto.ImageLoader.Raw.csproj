@@ -41,7 +41,7 @@
         <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="10.0.0" />
+        <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="10.1.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     </ItemGroup>
     <ItemGroup>
