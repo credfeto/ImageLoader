@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.10] - 2022-03-10
+### Changed
 - FF-1429 - Updated FunFair.Test.Common to 5.9.2.1676
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.36.0.43782
 - FF-1429 - Updated SecurityCodeScan.VS2019 to 5.6.1
@@ -19,12 +27,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.697
 - FF-1429 - Updated FunFair.Test.Common to 5.9.3.1699
 - FF-3881 - Updated DotNet SDK to 6.0.201
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.9] - 2022-02-18
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 5.9.1.1665
