@@ -9,6 +9,7 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+- FF-1429 - Updated SixLabors.ImageSharp to 2.1.0
 ### Removed
 ### Deployment Changes
 
