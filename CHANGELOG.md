@@ -9,13 +9,16 @@ Please ADD ALL Changes to the UNRELASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated SixLabors.ImageSharp to 2.1.0
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.11] - 2022-03-17
+### Changed
+- FF-1429 - Updated SixLabors.ImageSharp to 2.1.0
+
 ## [1.0.10] - 2022-03-10
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 5.9.2.1676
