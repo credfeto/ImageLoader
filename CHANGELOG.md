@@ -19,6 +19,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-3881 - Updated DotNet SDK to 6.0.202
 - FF-1429 - Updated SixLabors.ImageSharp to 2.1.1
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.701
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.38.0.46746
 ### Removed
 ### Deployment Changes
 
