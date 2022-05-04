@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated SixLabors.ImageSharp to 2.1.1
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.701
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.38.0.46746
+- FF-1429 - Updated xunit.runner.visualstudio to 2.4.4
 ### Removed
 ### Deployment Changes
 
