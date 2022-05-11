@@ -35,7 +35,7 @@
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="All" />
+        <PackageReference Include="AsyncFixer" Version="1.6.0" PrivateAssets="All" />
         <PackageReference Include="codecracker.CSharp" Version="1.1.0" PrivateAssets="All" />
         <PackageReference Include="FunFair.CodeAnalysis" Version="5.8.1.1203" PrivateAssets="All" />
         <PackageReference Include="Meziantou.Analyzer" Version="1.0.701" PrivateAssets="All" />
