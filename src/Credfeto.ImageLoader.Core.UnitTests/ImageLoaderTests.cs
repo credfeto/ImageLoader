@@ -17,12 +17,19 @@ public sealed class ImageLoaderTests : TestBase
         ImageLoaderCoreSetup.Configure(services);
 
         IImageConverter ic1 = Substitute.For<IImageConverter>();
-        ic1.SupportedExtensions.Returns(new[] { ".jpg", ".jpeg" });
+        ic1.SupportedExtensions.Returns(new[]
+                                        {
+                                            ".jpg",
+                                            ".jpeg"
+                                        });
 
         services = services.AddSingleton(ic1);
 
         IImageConverter ic2 = Substitute.For<IImageConverter>();
-        ic2.SupportedExtensions.Returns(new[] { ".png" });
+        ic2.SupportedExtensions.Returns(new[]
+                                        {
+                                            ".png"
+                                        });
 
         services = services.AddSingleton(ic2);
 

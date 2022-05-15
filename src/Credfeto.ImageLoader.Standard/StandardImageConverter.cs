@@ -9,7 +9,14 @@ namespace Credfeto.ImageLoader.Standard;
 
 public sealed class StandardImageConverter : IImageConverter
 {
-    public IReadOnlyList<string> SupportedExtensions => new[] { @"jpg", @"jpeg", @"bmp", @"png" };
+    public IReadOnlyList<string> SupportedExtensions =>
+        new[]
+        {
+            @"jpg",
+            @"jpeg",
+            @"bmp",
+            @"png"
+        };
 
     public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
     {

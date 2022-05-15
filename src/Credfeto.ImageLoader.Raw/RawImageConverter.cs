@@ -11,7 +11,26 @@ namespace Credfeto.ImageLoader.Raw;
 public sealed class RawImageConverter : IImageConverter
 {
     public IReadOnlyList<string> SupportedExtensions =>
-        new[] { @"arw", @"cf2", @"cr2", @"cr3", @"crw", @"dng", @"erf", @"mef", @"mrw", @"nef", @"orf", @"pef", @"raf", @"raw", @"rw2", @"sr2", @"x3f" };
+        new[]
+        {
+            @"arw",
+            @"cf2",
+            @"cr2",
+            @"cr3",
+            @"crw",
+            @"dng",
+            @"erf",
+            @"mef",
+            @"mrw",
+            @"nef",
+            @"orf",
+            @"pef",
+            @"raf",
+            @"raw",
+            @"rw2",
+            @"sr2",
+            @"x3f"
+        };
 
     public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
     {

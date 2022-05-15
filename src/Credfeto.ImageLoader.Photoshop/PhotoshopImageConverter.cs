@@ -10,7 +10,11 @@ namespace Credfeto.ImageLoader.Photoshop;
 
 public sealed class PhotoshopImageConverter : IImageConverter
 {
-    public IReadOnlyList<string> SupportedExtensions => new[] { @"psd" };
+    public IReadOnlyList<string> SupportedExtensions =>
+        new[]
+        {
+            @"psd"
+        };
 
     public async Task<Image<Rgba32>> LoadImageAsync(string fileName)
     {
