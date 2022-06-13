@@ -24,6 +24,8 @@ public sealed class ImageLoaderFactory : IImageLoader
         this.SupportedExtensions = this._converters.Keys.ToArray();
     }
 
+    public IReadOnlyCollection<string> SupportedExtensions { get; }
+
     public Task<Image<Rgba32>> LoadImageAsync(string fileName)
     {
         string extension = GetExtension(fileName);
@@ -37,8 +39,6 @@ public sealed class ImageLoaderFactory : IImageLoader
     {
         return this._converters.TryGetValue(GetExtension(fileName), out IImageConverter? _);
     }
-
-    public IReadOnlyCollection<string> SupportedExtensions { get; }
 
     private static string GetExtension(string fileName)
     {
