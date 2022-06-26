@@ -9,17 +9,20 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.Test.Common to 5.9.7.1871
-- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.3.1353
-- FF-1429 - Updated SixLabors.ImageSharp to 2.1.3
-- FF-1429 - Updated Magick.NET-Q16-AnyCPU to 11.2.1
-- FF-1429 - Updated FunFair.Test.Common to 5.9.8.1897
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.13] - 2022-06-26
+### Changed
+- FF-1429 - Updated FunFair.Test.Common to 5.9.7.1871
+- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.3.1353
+- FF-1429 - Updated SixLabors.ImageSharp to 2.1.3
+- FF-1429 - Updated Magick.NET-Q16-AnyCPU to 11.2.1
+- FF-1429 - Updated FunFair.Test.Common to 5.9.8.1897
+
 ## [1.0.12] - 2022-06-16
 ### Changed
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.698
