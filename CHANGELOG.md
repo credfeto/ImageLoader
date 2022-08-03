@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated xunit to 2.4.2
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.0.0
 - FF-1429 - Updated FunFair.Test.Common to 6.0.2.1981
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.43.0.51858
 ### Removed
 ### Deployment Changes
 
