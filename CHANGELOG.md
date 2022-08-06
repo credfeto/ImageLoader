@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 ### Changed
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.0.1
+- FF-1429 - Updated FunFair.Test.Common to 6.0.3.1991
 ### Removed
 ### Deployment Changes
 
