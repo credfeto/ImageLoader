@@ -9,6 +9,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+- FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.0.1
 ### Removed
 ### Deployment Changes
 
