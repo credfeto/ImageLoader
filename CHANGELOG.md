@@ -9,15 +9,18 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.Test.Common to 6.0.4.1998
-- FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.3.44
-- FF-3881 - Updated DotNet SDK to 6.0.400
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.18] - 2022-08-09
+### Changed
+- FF-1429 - Updated FunFair.Test.Common to 6.0.4.1998
+- FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.3.44
+- FF-3881 - Updated DotNet SDK to 6.0.400
+
 ## [1.0.17] - 2022-08-07
 ### Changed
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.0.1
