@@ -9,14 +9,17 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.5.1436
-- FF-1429 - Updated Microsoft.NET.Test.Sdk to 17.3.0
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.19] - 2022-08-10
+### Changed
+- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.5.1436
+- FF-1429 - Updated Microsoft.NET.Test.Sdk to 17.3.0
+
 ## [1.0.18] - 2022-08-09
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 6.0.4.1998
