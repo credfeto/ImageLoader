@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated SecurityCodeScan.VS2019 to 5.6.6
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.714
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.1.0
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.715
 ### Removed
 ### Deployment Changes
 
