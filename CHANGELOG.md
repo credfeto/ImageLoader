@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.722
 - FF-1429 - Updated SecurityCodeScan.VS2019 to 5.6.7
+- FF-1429 - Updated FunFair.CodeAnalysis to 5.9.0.1493
 ### Removed
 ### Deployment Changes
 
@@ -39,7 +40,6 @@ Releases that have at least been deployed to staging, BUT NOT necessarily releas
 
 ## [1.0.19] - 2022-08-10
 ### Changed
-- FF-1429 - Updated FunFair.CodeAnalysis to 5.8.5.1436
 
 ## [1.0.18] - 2022-08-09
 ### Changed
