@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 ### Changed
 - FF-1429 - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.1.7
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.733
 ### Removed
 ### Deployment Changes
 
