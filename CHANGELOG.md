@@ -9,16 +9,19 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.1.7
-- FF-1429 - Updated Meziantou.Analyzer to 1.0.733
-- FF-1429 - Updated SonarAnalyzer.CSharp to 8.46.0.54807
-- FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.2.0
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.24] - 2022-10-07
+### Changed
+- FF-1429 - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.1.7
+- FF-1429 - Updated Meziantou.Analyzer to 1.0.733
+- FF-1429 - Updated SonarAnalyzer.CSharp to 8.46.0.54807
+- FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.2.0
+
 ## [1.0.23] - 2022-09-26
 ### Changed
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.45.0.54064
