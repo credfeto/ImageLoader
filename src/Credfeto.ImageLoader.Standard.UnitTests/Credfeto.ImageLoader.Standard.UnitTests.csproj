@@ -38,7 +38,7 @@
     <ProjectReference Include="..\Credfeto.ImageLoader.Standard\Credfeto.ImageLoader.Standard.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FunFair.Test.Common" Version="6.0.4.1998" />
+    <PackageReference Include="FunFair.Test.Common" Version="6.0.5.2217" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="NSubstitute" Version="4.4.0" />
