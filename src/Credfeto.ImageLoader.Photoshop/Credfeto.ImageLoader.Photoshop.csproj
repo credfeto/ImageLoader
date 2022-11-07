@@ -43,7 +43,7 @@
     <ProjectReference Include="..\Credfeto.ImageLoader.Interfaces\Credfeto.ImageLoader.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Ntreev.Library.Psd" Version="1.1.18134.1310" />
   </ItemGroup>
   <ItemGroup>
