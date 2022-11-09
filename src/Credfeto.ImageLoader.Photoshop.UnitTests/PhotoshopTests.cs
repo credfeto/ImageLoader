@@ -33,9 +33,9 @@ public sealed class PhotoshopTests : TestBase
 
         Assert.NotNull(image);
 
-        using (FileStream fs = File.Create(path: "test.jpg"))
+        await using (FileStream fs = File.Create(path: "test.jpg"))
         {
-            image.SaveAsJpeg(fs);
+            await image.SaveAsJpegAsync(fs);
         }
     }
 
