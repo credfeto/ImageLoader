@@ -12,6 +12,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated FunFair.Test.Common to 6.0.7.2278
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.48.0.56517
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.2.1
+- FF-3881 - Updated DotNet SDK to 7.0.100
 ### Removed
 ### Deployment Changes
 
