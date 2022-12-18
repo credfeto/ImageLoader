@@ -7,7 +7,7 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 
-namespace Credfeto.ImageLoader.Standard.UnitTests;
+namespace Credfeto.ImageLoader.Standard.Tests;
 
 public sealed class JpegTests : TestBase
 {

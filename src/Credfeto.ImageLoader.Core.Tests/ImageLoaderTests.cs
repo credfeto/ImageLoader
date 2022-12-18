@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 using Xunit;
 
-namespace Credfeto.ImageLoader.Core.UnitTests;
+namespace Credfeto.ImageLoader.Core.Tests;
 
 public sealed class ImageLoaderTests : TestBase
 {

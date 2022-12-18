@@ -9,7 +9,7 @@ using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 using Xunit.Sdk;
 
-namespace Credfeto.ImageLoader.Raw.UnitTests;
+namespace Credfeto.ImageLoader.Raw.Tests;
 
 public sealed class CanonRawTests : TestBase
 {

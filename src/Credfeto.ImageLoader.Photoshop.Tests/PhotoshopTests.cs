@@ -8,7 +8,7 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using Xunit;
 
-namespace Credfeto.ImageLoader.Photoshop.UnitTests;
+namespace Credfeto.ImageLoader.Photoshop.Tests;
 
 public sealed class PhotoshopTests : TestBase
 {
