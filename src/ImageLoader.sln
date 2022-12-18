@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Core", "Credfeto.ImageLoader.Core\Credfeto.ImageLoader.Core.csproj", "{4D9E2B57-773A-4EFC-93DA-E0B9113D6336}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Core.UnitTests", "Credfeto.ImageLoader.Core.UnitTests\Credfeto.ImageLoader.Core.UnitTests.csproj", "{78FF90C7-27A2-4105-9121-35A155ECEA19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Core.Tests", "Credfeto.ImageLoader.Core.Tests\Credfeto.ImageLoader.Core.Tests.csproj", "{78FF90C7-27A2-4105-9121-35A155ECEA19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Raw", "Credfeto.ImageLoader.Raw\Credfeto.ImageLoader.Raw.csproj", "{E6C7CBE1-C6BA-43CA-A6D9-D173AC5A4036}"
 EndProject
@@ -12,11 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Standa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Photoshop", "Credfeto.ImageLoader.Photoshop\Credfeto.ImageLoader.Photoshop.csproj", "{BC0A5428-EDE7-4B20-BF96-F90E50FCC5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Photoshop.UnitTests", "Credfeto.ImageLoader.Photoshop.UnitTests\Credfeto.ImageLoader.Photoshop.UnitTests.csproj", "{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Photoshop.Tests", "Credfeto.ImageLoader.Photoshop.Tests\Credfeto.ImageLoader.Photoshop.Tests.csproj", "{518D4EED-4F8C-4D79-B9DB-54190D6BC2A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Raw.UnitTests", "Credfeto.ImageLoader.Raw.UnitTests\Credfeto.ImageLoader.Raw.UnitTests.csproj", "{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Raw.Tests", "Credfeto.ImageLoader.Raw.Tests\Credfeto.ImageLoader.Raw.Tests.csproj", "{5D79ADE2-5144-44CD-87EF-9ADD06BC1E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Standard.UnitTests", "Credfeto.ImageLoader.Standard.UnitTests\Credfeto.ImageLoader.Standard.UnitTests.csproj", "{F7504C3B-5705-439E-859F-C2AAD9F3202F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.ImageLoader.Standard.Tests", "Credfeto.ImageLoader.Standard.Tests\Credfeto.ImageLoader.Standard.Tests.csproj", "{F7504C3B-5705-439E-859F-C2AAD9F3202F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{925AF95F-30AB-4E67-901C-1152550076A3}"
 ProjectSection(SolutionItems) = preProject
