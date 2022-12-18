@@ -34,19 +34,19 @@
  - any: [ '.github/workflows/*.yml' ]
 "Credfeto.ImageLoader.Core":
  - any: [ 'src/Credfeto.ImageLoader.Core/**/*' ]
-"Credfeto.ImageLoader.Core.UnitTests":
- - any: [ 'src/Credfeto.ImageLoader.Core.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Core.Tests":
+ - any: [ 'src/Credfeto.ImageLoader.Core.Tests/**/*' ]
 "Credfeto.ImageLoader.Interfaces":
  - any: [ 'src/Credfeto.ImageLoader.Interfaces/**/*' ]
 "Credfeto.ImageLoader.Photoshop":
  - any: [ 'src/Credfeto.ImageLoader.Photoshop/**/*' ]
-"Credfeto.ImageLoader.Photoshop.UnitTests":
- - any: [ 'src/Credfeto.ImageLoader.Photoshop.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Photoshop.Tests":
+ - any: [ 'src/Credfeto.ImageLoader.Photoshop.Tests/**/*' ]
 "Credfeto.ImageLoader.Raw":
  - any: [ 'src/Credfeto.ImageLoader.Raw/**/*' ]
-"Credfeto.ImageLoader.Raw.UnitTests":
- - any: [ 'src/Credfeto.ImageLoader.Raw.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Raw.Tests":
+ - any: [ 'src/Credfeto.ImageLoader.Raw.Tests/**/*' ]
 "Credfeto.ImageLoader.Standard":
  - any: [ 'src/Credfeto.ImageLoader.Standard/**/*' ]
-"Credfeto.ImageLoader.Standard.UnitTests":
- - any: [ 'src/Credfeto.ImageLoader.Standard.UnitTests/**/*' ]
+"Credfeto.ImageLoader.Standard.Tests":
+ - any: [ 'src/Credfeto.ImageLoader.Standard.Tests/**/*' ]
