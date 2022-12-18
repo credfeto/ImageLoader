@@ -118,9 +118,9 @@
    color: "96f7d2"
    description: "Changes in Credfeto.ImageLoader.Core project"
 
- - name: "Credfeto.ImageLoader.Core.UnitTests"
-   color: "96f7d2"
-   description: "Changes in Credfeto.ImageLoader.Core.UnitTests project"
+ - name: "Credfeto.ImageLoader.Core.Tests"
+   color: "0e8a16"
+   description: "Changes in Credfeto.ImageLoader.Core.Tests project"
 
  - name: "Credfeto.ImageLoader.Interfaces"
    color: "96f7d2"
@@ -130,23 +130,23 @@
    color: "96f7d2"
    description: "Changes in Credfeto.ImageLoader.Photoshop project"
 
- - name: "Credfeto.ImageLoader.Photoshop.UnitTests"
-   color: "96f7d2"
-   description: "Changes in Credfeto.ImageLoader.Photoshop.UnitTests project"
+ - name: "Credfeto.ImageLoader.Photoshop.Tests"
+   color: "0e8a16"
+   description: "Changes in Credfeto.ImageLoader.Photoshop.Tests project"
 
  - name: "Credfeto.ImageLoader.Raw"
    color: "96f7d2"
    description: "Changes in Credfeto.ImageLoader.Raw project"
 
- - name: "Credfeto.ImageLoader.Raw.UnitTests"
-   color: "96f7d2"
-   description: "Changes in Credfeto.ImageLoader.Raw.UnitTests project"
+ - name: "Credfeto.ImageLoader.Raw.Tests"
+   color: "0e8a16"
+   description: "Changes in Credfeto.ImageLoader.Raw.Tests project"
 
  - name: "Credfeto.ImageLoader.Standard"
    color: "96f7d2"
    description: "Changes in Credfeto.ImageLoader.Standard project"
 
- - name: "Credfeto.ImageLoader.Standard.UnitTests"
-   color: "96f7d2"
-   description: "Changes in Credfeto.ImageLoader.Standard.UnitTests project"
+ - name: "Credfeto.ImageLoader.Standard.Tests"
+   color: "0e8a16"
+   description: "Changes in Credfeto.ImageLoader.Standard.Tests project"
 
