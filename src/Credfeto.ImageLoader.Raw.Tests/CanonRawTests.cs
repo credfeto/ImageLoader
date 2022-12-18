@@ -57,8 +57,8 @@ public sealed class CanonRawTests : TestBase
         Image<Rgba32> image = await this._converter.LoadImageAsync(fileName);
 
         Assert.NotNull(image);
-        Assert.Equal(expected: 3870, actual: image.Width);
-        Assert.Equal(expected: 5796, actual: image.Height);
+        Assert.Equal(expected: 5796, actual: image.Width);
+        Assert.Equal(expected: 3870, actual: image.Height);
         Assert.Equal(expected: 32, actual: image.PixelType.BitsPerPixel);
     }
 
