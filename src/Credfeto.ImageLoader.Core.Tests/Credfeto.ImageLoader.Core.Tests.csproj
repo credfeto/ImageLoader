@@ -1,21 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <DebuggerSupport>true</DebuggerSupport>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
     <EnablePackageValidation>true</EnablePackageValidation>
     <Features>strict;flow-analysis</Features>
     <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
     <ImplicitUsings>disable</ImplicitUsings>
     <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
     <IsPackable>false</IsPackable>
     <IsPublishable>false</IsPublishable>
     <LangVersion>latest</LangVersion>
-    <NoWarn>1591</NoWarn>
+    <NoWarn/>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
+    <RunAOTCompilation>false</RunAOTCompilation>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <TieredCompilation>true</TieredCompilation>
+    <TieredPGO>true</TieredPGO>
     <TreatSpecificWarningsAsErrors />
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
     <WarningsAsErrors />
   </PropertyGroup>
   <PropertyGroup>
