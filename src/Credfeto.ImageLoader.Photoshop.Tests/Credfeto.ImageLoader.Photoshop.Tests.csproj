@@ -45,6 +45,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0"/>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
     <PackageReference Include="NSubstitute" Version="4.4.0" />
+    <PackageReference Include="TeamCity.VSTest.TestAdapter" Version="1.0.36"/>
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
   </ItemGroup>
@@ -67,5 +68,6 @@
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.48.0.56517" PrivateAssets="All" ExcludeAssets="runtime"/>
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" ExcludeAssets="runtime"/>
     <PackageReference Include="ToStringWithoutOverrideAnalyzer" Version="0.6.0" PrivateAssets="All" ExcludeAssets="runtime"/>
+    <PackageReference Include="xunit.analyzers" Version="1.1.0" PrivateAssets="All" ExcludeAssets="runtime"/>
   </ItemGroup>
 </Project>
