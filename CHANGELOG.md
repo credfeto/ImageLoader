@@ -15,6 +15,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-3881 - Updated DotNet SDK to 7.0.101
 - FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.2.14
 - FF-1429 - Updated Meziantou.Analyzer to 1.0.757
+- FF-1429 - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.4.27
 ### Removed
 ### Deployment Changes
 
