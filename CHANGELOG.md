@@ -9,7 +9,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.Test.Common to 6.0.7.2278
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.2.1
 - FF-3881 - Updated DotNet SDK to 7.0.101
 - FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.2.14
@@ -18,6 +17,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.2.30
 - FF-1429 - Updated Roslynator.Analyzers to 4.2.0
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.51.0.59060
+- FF-1429 - Updated FunFair.Test.Common to 6.0.12.2443
 ### Removed
 ### Deployment Changes
 
