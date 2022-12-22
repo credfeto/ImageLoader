@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.28] - 2022-12-22
+### Changed
 - FF-1429 - Updated Magick.NET-Q16-AnyCPU to 12.2.1
 - FF-3881 - Updated DotNet SDK to 7.0.101
 - FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.2.14
@@ -19,12 +27,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.51.0.59060
 - FF-1429 - Updated FunFair.Test.Common to 6.0.12.2443
 - FF-1429 - Updated Microsoft.NET.Test.Sdk to 17.4.1
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.27] - 2022-11-08
 ### Changed
 - FF-1429 - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.2.29
