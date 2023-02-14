@@ -44,7 +44,7 @@
     <ProjectReference Include="..\Credfeto.ImageLoader.Raw\Credfeto.ImageLoader.Raw.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FunFair.Test.Common" Version="6.0.20.2640" />
+    <PackageReference Include="FunFair.Test.Common" Version="6.0.21.2653" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
     <PackageReference Include="NSubstitute" Version="5.0.0" />
