@@ -9,16 +9,19 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated NSubstitute to 5.0.0
-- FF-3881 - Updated DotNet SDK to 7.0.200
-- FF-1429 - Updated Meziantou.Analyzer to 2.0.15
-- FF-1429 - Updated FunFair.Test.Common to 6.0.22.2685
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.34] - 2023-02-17
+### Changed
+- FF-1429 - Updated NSubstitute to 5.0.0
+- FF-3881 - Updated DotNet SDK to 7.0.200
+- FF-1429 - Updated Meziantou.Analyzer to 2.0.15
+- FF-1429 - Updated FunFair.Test.Common to 6.0.22.2685
+
 ## [1.0.33] - 2023-02-11
 ### Changed
 - FF-1429 - Updated NSubstitute.Analyzers.CSharp to 1.0.16
