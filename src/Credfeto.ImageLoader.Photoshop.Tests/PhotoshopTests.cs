@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using Credfeto.ImageLoader.Interfaces;
 using FunFair.Test.Common;
@@ -35,7 +36,7 @@ public sealed class PhotoshopTests : TestBase
 
         await using (FileStream fs = File.Create(path: "test.jpg"))
         {
-            await image.SaveAsJpegAsync(fs);
+            await image.SaveAsJpegAsync(stream: fs, cancellationToken: CancellationToken.None);
         }
     }
 
