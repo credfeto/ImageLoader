@@ -9,15 +9,18 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated FunFair.Test.Common to 6.0.25.2731
-- FF-1429 - Updated Meziantou.Analyzer to 2.0.19
-- FF-1429 - Updated SixLabors.ImageSharp to 3.0.0
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.38] - 2023-03-01
+### Changed
+- FF-1429 - Updated FunFair.Test.Common to 6.0.25.2731
+- FF-1429 - Updated Meziantou.Analyzer to 2.0.19
+- FF-1429 - Updated SixLabors.ImageSharp to 3.0.0
+
 ## [1.0.37] - 2023-02-25
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 6.0.24.2725
