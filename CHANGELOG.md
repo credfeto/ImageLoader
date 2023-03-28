@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dependencies - Updated Meziantou.Analyzer to 2.0.26
 - Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.0.1
+- Dependencies - Updated SixLabors.ImageSharp to 3.0.1
 ### Removed
 ### Deployment Changes
 
