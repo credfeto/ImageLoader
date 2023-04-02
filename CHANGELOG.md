@@ -9,15 +9,18 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.0.1
-- Dependencies - Updated SixLabors.ImageSharp to 3.0.1
-- Dependencies - Updated Meziantou.Analyzer to 2.0.29
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.40] - 2023-04-02
+### Changed
+- Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.0.1
+- Dependencies - Updated SixLabors.ImageSharp to 3.0.1
+- Dependencies - Updated Meziantou.Analyzer to 2.0.29
+
 ## [1.0.39] - 2023-03-21
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 6.0.26.2754
