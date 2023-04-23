@@ -13,6 +13,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated SonarAnalyzer.CSharp to 8.56.0.67649
 - Dependencies - Updated Meziantou.Analyzer to 2.0.36
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.0.9.588
+- Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.1.0
 ### Removed
 ### Deployment Changes
 

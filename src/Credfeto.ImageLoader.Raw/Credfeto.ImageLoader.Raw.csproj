@@ -53,7 +53,7 @@
     <ProjectReference Include="..\Credfeto.ImageLoader.Interfaces\Credfeto.ImageLoader.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="13.0.1" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="13.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
