@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 ### Changed
 - Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.1.2
+- Dependencies - Updated Microsoft.NET.Test.Sdk to 17.6.0
 ### Removed
 ### Deployment Changes
 
