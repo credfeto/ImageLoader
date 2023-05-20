@@ -15,11 +15,6 @@ public sealed class ImageLoaderFactory : IImageLoader
 
     public ImageLoaderFactory(IEnumerable<IImageConverter> converters)
     {
-        if (converters == null)
-        {
-            throw new ArgumentNullException(nameof(converters));
-        }
-
         this._converters = LoadConverters(converters);
         this.SupportedExtensions = this._converters.Keys.ToArray();
     }
