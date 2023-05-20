@@ -14,7 +14,7 @@ public sealed class ImageLoaderTests : TestBase
     {
         IServiceCollection services = new ServiceCollection();
 
-        ImageLoaderCoreSetup.Configure(services);
+        services = services.AddImageLoaderCore();
 
         IImageConverter ic1 = Substitute.For<IImageConverter>();
         ic1.SupportedExtensions.Returns(new[]
@@ -42,12 +42,16 @@ public sealed class ImageLoaderTests : TestBase
     [Fact]
     public void ThrowsExceptionWhenNoConvertersRegistered()
     {
-        IServiceCollection services = new ServiceCollection();
-
-        ImageLoaderCoreSetup.Configure(services);
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
+        IServiceProvider serviceProvider = BuildServiceProvider();
 
         Assert.Throws<ArgumentOutOfRangeException>(testCode: () => serviceProvider.GetService<IImageLoader>());
+    }
+
+    private static IServiceProvider BuildServiceProvider()
+    {
+        IServiceProvider serviceProvider = new ServiceCollection().AddImageLoaderCore()
+                                                                  .BuildServiceProvider();
+
+        return serviceProvider;
     }
 }

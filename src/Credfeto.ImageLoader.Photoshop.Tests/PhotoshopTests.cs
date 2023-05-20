@@ -17,11 +17,8 @@ public sealed class PhotoshopTests : TestBase
 
     public PhotoshopTests()
     {
-        IServiceCollection services = new ServiceCollection();
-
-        ImageLoaderPhotoshopSetup.Configure(services);
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
+        IServiceProvider serviceProvider = new ServiceCollection().AddImageLoaderPhotoshop()
+                                                                  .BuildServiceProvider();
 
         this._converter = serviceProvider.GetRequiredService<IImageConverter>();
         Assert.NotNull(this._converter);

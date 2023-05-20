@@ -17,11 +17,8 @@ public sealed class CanonRawTests : TestBase
 
     public CanonRawTests()
     {
-        IServiceCollection services = new ServiceCollection();
-
-        ImageLoaderRawSetup.Configure(services);
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
+        IServiceProvider serviceProvider = new ServiceCollection().AddImageLoaderRaw()
+                                                                  .BuildServiceProvider();
 
         this._converter = serviceProvider.GetRequiredService<IImageConverter>();
         Assert.NotNull(this._converter);

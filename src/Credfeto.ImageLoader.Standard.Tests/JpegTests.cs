@@ -15,11 +15,8 @@ public sealed class JpegTests : TestBase
 
     public JpegTests()
     {
-        IServiceCollection services = new ServiceCollection();
-
-        ImageLoaderStandardSetup.Configure(services);
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
+        IServiceProvider serviceProvider = new ServiceCollection().AddImageLoaderStandard()
+                                                                  .BuildServiceProvider();
 
         this._converter = serviceProvider.GetRequiredService<IImageConverter>();
         Assert.NotNull(this._converter);

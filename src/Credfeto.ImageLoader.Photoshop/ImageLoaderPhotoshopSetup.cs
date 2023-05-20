@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Credfeto.ImageLoader.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,13 +7,8 @@ namespace Credfeto.ImageLoader.Photoshop;
 [ExcludeFromCodeCoverage]
 public static class ImageLoaderPhotoshopSetup
 {
-    public static void Configure(IServiceCollection services)
+    public static IServiceCollection AddImageLoaderPhotoshop(this IServiceCollection services)
     {
-        if (services == null)
-        {
-            throw new ArgumentNullException(nameof(services));
-        }
-
-        services.AddSingleton<IImageConverter, PhotoshopImageConverter>();
+        return services.AddSingleton<IImageConverter, PhotoshopImageConverter>();
     }
 }
