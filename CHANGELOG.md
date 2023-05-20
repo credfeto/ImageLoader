@@ -12,6 +12,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Magick.NET-Q16-AnyCPU to 13.1.2
 - Dependencies - Updated Microsoft.NET.Test.Sdk to 17.6.0
 - SDK - Updated DotNet SDK to 8.0.100-preview.4.23260.5
+- Dependencies - Updated Meziantou.Analyzer to 2.0.52
 ### Removed
 ### Deployment Changes
 
