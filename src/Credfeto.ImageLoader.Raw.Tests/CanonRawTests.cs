@@ -28,7 +28,7 @@ public sealed class CanonRawTests : TestBase
     {
         string? location = Path.GetDirectoryName(typeof(CanonRawTests).Assembly.Location);
 
-        if (location == null)
+        if (location is null)
         {
             throw new NullException($"Could not fine {fileName}");
         }
