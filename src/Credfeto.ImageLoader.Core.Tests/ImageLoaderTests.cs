@@ -12,24 +12,28 @@ public sealed class ImageLoaderTests : TestBase
     [Fact]
     public void DoesNotThrowIfMultipleConvertersRegistered()
     {
+        string[] converters =
+        {
+            ".jpg",
+            ".jpeg"
+        };
+
+        string[] expected =
+        {
+            ".png"
+        };
+
         IServiceCollection services = new ServiceCollection();
 
         services = services.AddImageLoaderCore();
 
         IImageConverter ic1 = Substitute.For<IImageConverter>();
-        ic1.SupportedExtensions.Returns(new[]
-                                        {
-                                            ".jpg",
-                                            ".jpeg"
-                                        });
+        ic1.SupportedExtensions.Returns(converters);
 
         services = services.AddSingleton(ic1);
 
         IImageConverter ic2 = Substitute.For<IImageConverter>();
-        ic2.SupportedExtensions.Returns(new[]
-                                        {
-                                            ".png"
-                                        });
+        ic2.SupportedExtensions.Returns(expected);
 
         services = services.AddSingleton(ic2);
 
